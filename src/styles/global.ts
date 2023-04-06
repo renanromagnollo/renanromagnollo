@@ -1,3 +1,5 @@
+'use client'
+
 import { lighten } from 'polished'
 import {createGlobalStyle} from 'styled-components'
 

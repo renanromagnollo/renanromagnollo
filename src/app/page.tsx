@@ -1,10 +1,21 @@
+'use client'
+
 import Link from "next/link"
+
+import GlobalStyle from '../styles/global'
+import { ThemeProvider } from "styled-components"
+import dark from "@/styles/themes/dark"
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <Link href="/articles">Articles</Link>
-    </div>
+    <ThemeProvider theme={dark}>
+      <div>
+          <GlobalStyle />
+          <h1>Hello World</h1>
+          <Link href="/articles">Articles</Link>
+        </div>
+    </ThemeProvider>
+
+
   )
 }
