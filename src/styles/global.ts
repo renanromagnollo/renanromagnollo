@@ -41,4 +41,27 @@ export default createGlobalStyle`
         list-style: none;
     }
 
+    button {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        @media(max-width: 1450px) {
+            
+        }
+        @media(max-width: 1000px) {
+
+        }
+        @media(max-width: 700px) {
+
+        }
+    }
+
 `
