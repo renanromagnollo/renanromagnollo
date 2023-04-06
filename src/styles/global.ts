@@ -1,4 +1,3 @@
-'use client'
 
 import { lighten } from 'polished'
 import {createGlobalStyle} from 'styled-components'
@@ -21,17 +20,16 @@ export default createGlobalStyle`
         height: 5px;
     }
     ::-webkit-scrollbar-thumb {
-        background: ${({theme}) => theme.colors.primary};
+        background: ${({theme}) => theme.colors.background};
         border-radius: 10px;
     }
     ::-webkit-scrollbar-track {
-        background: ${({theme}) =>  lighten(0.4, theme.colors.primary)};
+        background: ${({theme}) =>  lighten(0.4, theme.colors.background)};
     }
 
     body {
         background: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};
-        font: ${props => props.theme.fonts.primary.font};
     }
 
     img {
@@ -50,6 +48,50 @@ export default createGlobalStyle`
     a {
         text-decoration: none;
     }
+    
+    h1 {
+        font-family: ${({theme}) => theme.fonts.h1.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.h1.fontWeight};
+        font-size: ${({theme}) => theme.fonts.h1.fontSize};
+        line-height: ${({theme}) => theme.fonts.h1.lineHeight};
+    }
+    h2 {
+        font-family: ${({theme}) => theme.fonts.h2.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.h2.fontWeight};
+        font-size: ${({theme}) => theme.fonts.h2.fontSize};
+        line-height: ${({theme}) => theme.fonts.h2.lineHeight};
+    }
+    h3 {
+        font-family: ${({theme}) => theme.fonts.h3.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.h3.fontWeight};
+        font-size: ${({theme}) => theme.fonts.h3.fontSize};
+        line-height: ${({theme}) => theme.fonts.h3.lineHeight};
+    }
+    h4 {
+        font-family: ${({theme}) => theme.fonts.h4.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.h4.fontWeight};
+        font-size: ${({theme}) => theme.fonts.h4.fontSize};
+        line-height: ${({theme}) => theme.fonts.h4.lineHeight};
+    }
+    h5 {
+        font-family: ${({theme}) => theme.fonts.h5.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.h5.fontWeight};
+        font-size: ${({theme}) => theme.fonts.h5.fontSize};
+        line-height: ${({theme}) => theme.fonts.h5.lineHeight};
+    }
+    h6 {
+        font-family: ${({theme}) => theme.fonts.h6.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.h6.fontWeight};
+        font-size: ${({theme}) => theme.fonts.h6.fontSize};
+        line-height: ${({theme}) => theme.fonts.h6.lineHeight};
+    }
+    p {
+        font-family: ${({theme}) => theme.fonts.p.fontFamily};
+        font-weight: ${({theme}) => theme.fonts.p.fontWeight};
+        font-size: ${({theme}) => theme.fonts.p.fontSize};
+        line-height: ${({theme}) => theme.fonts.p.lineHeight};
+    }
+
 
     .container {
         width: 100%;
