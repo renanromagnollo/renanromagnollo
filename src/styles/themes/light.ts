@@ -1,95 +1,38 @@
+interface fontAtributesProps {
+    fontFamily: string, 
+    fontStyle: string, 
+    fontWeight: number, 
+    fontSize: string, 
+    lineHeight: string
+}
+
+function fontAtributes(fontFamily: string, fontStyle: string, fontWeight: number, 
+                        fontSize: string, lineHeight: string): fontAtributesProps {
+    return {
+        fontFamily,
+        fontStyle,
+        fontWeight,
+        fontSize,
+        lineHeight
+    }
+}
+
 
 export default {
     title: 'light',
 
     fonts: {
-        h1: {
-            fontFamily: 'Kanit',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '4.8rem',
-            lineHeight: '110%'
-        },
-
-        h2: {
-            fontFamily: 'Kanit',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '4rem',
-            lineHeight: '110%'
-        },
-
-        h3: {
-            fontFamily: 'Nunito',
-            fontStyle: 'normal',
-            fontWeight: 500,
-            fontSize: '3.3rem',
-            lineHeight: '110%'
-        },
-
-        h4: {
-            fontFamily: 'Nunito',
-            fontStyle: 'normal',
-            fontWeight: 500,
-            fontSize: '2.8rem',
-            lineHeight: '120%'
-        },
-
-        h5: {
-            fontFamily: 'Kanit',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '2.3rem',
-            lineHeight: '120%'
-        },
-
-        h6: {
-            fontFamily: 'Kanit',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '1.9rem',
-            lineHeight: '120%'
-        },
-
-        h6Bold: {
-            fontFamily: 'Kanit',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            fontSize: '1.9rem',
-            lineHeight: '120%'
-        },
-
-        p: {
-            fontFamily: 'Quicksand',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '1.6rem',
-            lineHeight: '150%'
-        },
-
-        pBold: {
-            fontFamily: 'Quicksand',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            fontSize: '1.6rem',
-            lineHeight: '150%'
-        },
-
-        small: {
-            fontFamily: 'Quicksand',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '1.3rem',
-            lineHeight: '150%'
-        },
-        
-        smallBold: {
-            fontFamily: 'Quicksand',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            fontSize: '1.3rem',
-            lineHeight: '150%'
-        }
+        h1: fontAtributes('Kanit', 'normal', 400, '4.8rem', '110%'),
+        h2: fontAtributes('Kanit', 'normal', 400, '4rem', '110%'),
+        h3: fontAtributes('Nunito', 'normal', 500, '3.3rem', '110%'),
+        h4: fontAtributes('Nunito', 'normal', 500, '2.8rem', '120%'),
+        h5: fontAtributes('Kanit', 'normal', 400, '2.3rem', '120%'),
+        h6: fontAtributes('Kanit', 'normal', 400, '1.9rem', '120%'),
+        h6Bold: fontAtributes('Kanit', 'normal', 700, '1.9rem', '120%'),
+        p: fontAtributes('Quicksand', 'normal', 400, '1.6rem', '150%'),
+        pBold: fontAtributes('Quicksand', 'normal', 700, '1.6rem', '150%'),
+        small: fontAtributes('Quicksand', 'normal', 400, '1.3rem', '150%'),
+        smallBold: fontAtributes('Quicksand', 'normal', 700, '1.3rem', '150%'),
     },
 
     colors: {
@@ -122,7 +65,7 @@ export default {
             default: '#F3F3F3',
             dark: '#878B92'
         },
-        background: '#1D1D20',
-        text: '#F3F3F3'
+        background: '#F3F3F3',
+        text: '#2D2E32'
     }
 } 
