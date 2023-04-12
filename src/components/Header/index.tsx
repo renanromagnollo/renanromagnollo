@@ -12,6 +12,19 @@ export function Header() {
                 <div className="logomarca">
                     <Image src="/logo-white.svg" alt='logo' width={300} height={30}/>
                 </div>
+                <div className="menu">
+                    <div className="links">
+                        <ul>
+                            <li>Services</li>
+                            <li>Works</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div className="switch">
+                        Switch
+                    </div>
+                </div>
             </HeaderStyle>
 
     )
