@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header"
 import StyledComponentsRegistry from "@/styles/registry"
 
 export const metadata = {
@@ -9,7 +10,10 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
     <html lang="pt-br">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Header/>
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
