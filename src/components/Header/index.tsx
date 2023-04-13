@@ -1,12 +1,17 @@
 'use client'
 
-import { ThemeProvider } from "styled-components";
+import { ThemeContext} from "styled-components";
 import { HeaderStyle } from "./styles";
 import dark from "@/styles/themes/dark";
 
 import Image from 'next/image'
+import Switch from 'react-switch'
+import { useContext } from "react";
 
 export function Header() {
+
+    // const {colors, title} = useContext(ThemeContext)
+
     return (
             <HeaderStyle>
                 <div className="logomarca">
@@ -22,7 +27,17 @@ export function Header() {
                         </ul>
                     </div>
                     <div className="switch">
-                        Switch
+                        <Switch 
+                            onChange={toggleTheme => console.log('mudou tema!')}
+                            // checked={}
+                            checkedIcon={false}
+                            uncheckedIcon={false}
+                            height={10}
+                            width={40}
+                            handleDiameter={20}
+                            offColor={'#111'}
+                            onColor={'#F3F3F3'}
+                        />
                     </div>
                 </div>
             </HeaderStyle>

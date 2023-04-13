@@ -11,7 +11,6 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
     <html lang="pt-br">
       <body>
         <StyledComponentsRegistry>
-          <Header/>
           {children}
         </StyledComponentsRegistry>
       </body>
