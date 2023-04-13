@@ -38,9 +38,14 @@ export const HeaderStyle = styled.div`
             font-size: 1.7rem;
             line-height: 2.1rem;
             text-transform: uppercase;
+            
+            li {
+                transition: color .2s ease-in;
+            }
 
             li:hover {
                 color: #0D99FF;
+                cursor: pointer;
             }
 
 

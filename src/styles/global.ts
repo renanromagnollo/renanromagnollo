@@ -24,7 +24,7 @@ export default createGlobalStyle`
         border-radius: 10px;
     }
     ::-webkit-scrollbar-track {
-        background: ${({theme}) =>  lighten(0.4, theme.colors.background)};
+        background: ${({theme}) =>  theme.colors.dark.light};
     }
 
     body {
