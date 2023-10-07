@@ -9,13 +9,11 @@ import light from "@/styles/themes/light"
 
 export default function Home() {
   return (
-    <ThemeProvider theme={dark}>
       <div>
           <GlobalStyle />
           <h1>Hello World</h1>
           <Link href="/articles">Articles</Link>
         </div>
-    </ThemeProvider>
 
 
   )

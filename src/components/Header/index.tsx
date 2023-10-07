@@ -7,6 +7,7 @@ import dark from "@/styles/themes/dark";
 import Image from 'next/image'
 import Switch from 'react-switch'
 import { useContext } from "react";
+import { Logo } from "../icons/logo";
 
 export function Header() {
 
@@ -14,8 +15,9 @@ export function Header() {
 
     return (
             <HeaderStyle>
-                <div className="logomarca">
-                    <Image src="/logo-white.svg" alt='logo' width={300} height={30}/>
+                <div className="logomarca" style={{userSelect: 'none'}}>
+                    {/* <Image src="/logo-white.svg" alt='logo' width={300} height={30}/> */}
+                    <Logo theme={'dark'}/>
                 </div>
                 <div className="menu">
                     <div className="links">

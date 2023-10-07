@@ -41,6 +41,7 @@ export const HeaderStyle = styled.div`
             
             li {
                 transition: color .2s ease-in;
+                user-select: none;
             }
 
             li:hover {

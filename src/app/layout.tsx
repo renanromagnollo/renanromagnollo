@@ -1,4 +1,3 @@
-import { Header } from "@/components/Header"
 import StyledComponentsRegistry from "@/styles/registry"
 
 export const metadata = {

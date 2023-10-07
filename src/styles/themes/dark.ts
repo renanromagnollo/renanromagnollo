@@ -18,6 +18,7 @@ function fontAtributes(fontFamily: string, fontStyle: string, fontWeight: number
 }
 
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     title: 'dark',
 
