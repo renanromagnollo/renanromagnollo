@@ -8,6 +8,32 @@ import Image from 'next/image'
 import Switch from 'react-switch'
 import { useContext } from "react";
 import { Logo } from "../icons/logo";
+import Link from "next/link";
+import { NavItem } from "./Nav";
+
+const navItems = [
+    {
+        label: 'Home',
+        href: '/'
+    },
+    {
+        label: 'Services',
+        href: '/'
+    },
+    {
+        label: 'Projects',
+        href: '/projects'
+    },
+    {
+        label: 'Blog',
+        href: '/'
+    },
+    {
+        label: 'Contact',
+        href: '/'
+    }
+]
+
 
 export function Header() {
 
@@ -17,17 +43,25 @@ export function Header() {
             <HeaderStyle>
                 <div className="logomarca" style={{userSelect: 'none'}}>
                     {/* <Image src="/logo-white.svg" alt='logo' width={300} height={30}/> */}
-                    <Logo theme={'dark'}/>
+                    <Link href="/">
+                        <Logo theme={'dark'}/>
+                    </Link>
+                    {/* <Logo theme={'dark'}/> */}
                 </div>
                 <div className="menu">
-                    <div className="links">
+                    {/* <div className="links">
                         <ul>
                             <li>Services</li>
-                            <li>Works</li>
+                            <li>Projects</li>
                             <li>Blog</li>
                             <li>Contact</li>
                         </ul>
-                    </div>
+                    </div> */}
+                    <nav className="links">
+                        {navItems.map(item => (
+                            <NavItem {...item} key={item.label}/>
+                        ))}
+                    </nav>
                     <div className="switch">
                         <Switch 
                             onChange={toggleTheme => console.log('mudou tema!')}
