@@ -21,8 +21,8 @@ export function ContactForm(){
         resolver: zodResolver(contactFormSchema)
     })
 
-    const onSubmite = (data) => {
-
+    const onSubmit = (data: ContactFormData) => {
+        console.log(data)
     }
 
     return(
