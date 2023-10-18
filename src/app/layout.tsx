@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/ContactForm"
 import StyledComponentsRegistry from "@/styles/registry"
 
 export const metadata = {
@@ -11,6 +12,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
       <body>
         <StyledComponentsRegistry>
           {children}
+          <ContactForm />
         </StyledComponentsRegistry>
       </body>
     </html>
