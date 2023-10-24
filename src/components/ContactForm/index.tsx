@@ -26,7 +26,7 @@ export function ContactForm(){
     }
 
     return(
-        <section>
+        <section id="contact">
             <div>
                 <h1>Contato</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>

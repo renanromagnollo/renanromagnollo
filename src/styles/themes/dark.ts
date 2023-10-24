@@ -66,7 +66,7 @@ export default {
             default: '#F3F3F3',
             dark: '#878B92'
         },
-        background: `${this?.dark.dark}`,
-        text: `${this?.light.default}`
+        background: '#1D1D20',
+        text: '#F3F3F3'
     }
 } 
