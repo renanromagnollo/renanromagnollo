@@ -6,7 +6,7 @@ interface fontAtributesProps {
     lineHeight: string
 }
 
-function fontAtributes(fontFamily: string, fontStyle: string, fontWeight: number, 
+export function fontAtributes(fontFamily: string, fontStyle: string, fontWeight: number, 
                         fontSize: string, lineHeight: string): fontAtributesProps {
     return {
         fontFamily,

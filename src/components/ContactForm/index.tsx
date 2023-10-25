@@ -5,7 +5,7 @@ import {z} from 'zod'
 import {zodResolver} from '@hookform/resolvers/zod'
 
 import {HiArrowNarrowRight} from 'react-icons/hi'
-import { Button } from "../Button";
+import { ButtonTag } from "../Button";
 
 const contactFormSchema = z.object({
     name: z.string().min(3).max(100),
@@ -44,10 +44,10 @@ export function ContactForm(){
                         placeholder="Mensagem..."
                         {...register('message')}
                     />
-                    <Button>
+                    <ButtonTag>
                         Enviar mensagem
                         <HiArrowNarrowRight size={18} />
-                    </Button>
+                    </ButtonTag>
                 </form>
             </div>
         </section>

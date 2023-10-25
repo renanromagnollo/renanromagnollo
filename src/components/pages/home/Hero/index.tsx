@@ -1,4 +1,4 @@
-import { Button } from "@/components/Button";
+import { ButtonTag } from "@/components/Button";
 import {AiOutlineArrowDown} from 'react-icons/ai'
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ const freehand = Freehand({
 const SectionTag = styled.section`
     width: 100vw;
     margin: auto;
-    padding: 20px 0;
+    padding: 30px 0;
 
     .container {
         width: 100%;
@@ -56,10 +56,10 @@ export function HeroSection(props : HeroSectionProps){
                         techs
                     </div>
                     <div>
-                        <Button>
+                        <ButtonTag>
                             Leia mais...
-                            <AiOutlineArrowDown size={18}/>
-                        </Button>
+                            <AiOutlineArrowDown size={25}/>
+                        </ButtonTag>
                     </div>
                 </div>
                 <div style={{width: '250px', height: '300px', backgroundColor: 'darkgray'}}>
