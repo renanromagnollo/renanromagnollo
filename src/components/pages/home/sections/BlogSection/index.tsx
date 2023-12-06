@@ -13,7 +13,7 @@ const ContainerBlogSection = styled.section`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 8vh;
     /* background-color: pink; */
     padding: 20px 0;
 `

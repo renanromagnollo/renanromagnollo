@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { TitleSection } from "../TitleSection"
-import { CardContent } from "../Cards/CardContent"
+import { TitleSection } from "../../../../TitleSection"
+import { CardContent } from "../../../../Cards/CardContent"
 
 interface ProjectsProps {
 
