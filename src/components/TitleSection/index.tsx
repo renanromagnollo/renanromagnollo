@@ -1,7 +1,9 @@
 import styled from "styled-components"
 
 interface TitleSectionProps {
-
+    path?: string
+    title: string
+    subtitle?: string
 }
 
 const ContainerTag = styled.div`
@@ -27,13 +29,15 @@ const ContainerTag = styled.div`
         }
 
     `
-export function TitleSection(props : TitleSectionProps){
+export function TitleSection({title='Section Title', path='/path', subtitle=`lorem`}: TitleSectionProps){
+    let sub = subtitle === 'lorem' ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' : subtitle
+    
     return(
         <ContainerTag>
             <div>
-                <h4>/projects</h4>
-                <h1>My Personal Projects</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <h4>{path}</h4>
+                <h1>{title}</h1>
+                <p>{sub}</p>
 
             </div>
         </ContainerTag>
