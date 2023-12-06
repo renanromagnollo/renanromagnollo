@@ -7,12 +7,14 @@ import { ThemeProvider } from "styled-components"
 import dark from "@/styles/themes/dark"
 import light from "@/styles/themes/light"
 import { HeroSection } from "@/components/pages/home/Hero"
+import { Projects } from "@/components/Projects"
 
 export default function Home() {
   return (
-      <div>
+        <div>
           <GlobalStyle />
           <HeroSection/>
+          <Projects/>
           <Link href="/articles">Articles</Link>
         </div>
 
