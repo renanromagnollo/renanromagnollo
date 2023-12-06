@@ -1,11 +1,12 @@
 import styled from "styled-components"
 import { TitleSection } from "../TitleSection"
+import { CardContent } from "../Cards/CardContent"
 
 interface ProjectsProps {
 
 }
 
-const Container = styled.section`
+const ProjectsContainer = styled.section`
     width: 100vw;
     background-color: ${({theme}) => theme.colors.dark.light};
     display: flex;
@@ -16,8 +17,11 @@ const Container = styled.section`
 `
 export function Projects(props : ProjectsProps){
     return(
-        <Container>
+        <ProjectsContainer>
             <TitleSection/>
-        </Container>
+            <div>
+                <CardContent title='Título' text='Text...'/>
+            </div>
+        </ProjectsContainer>
     )
 }
