@@ -32,8 +32,7 @@ const ContainerCardTitle = styled.div`
         right: 0;
         padding: 10px;
         text-align: right;
-        color: ${({theme}) => theme.colors.primary.default};
-        background-color: ${({theme}) => theme.colors.dark.dark};
+        color: ${({theme}) => theme.colors.dark.default};
         opacity: 0.9;
     }
 `
