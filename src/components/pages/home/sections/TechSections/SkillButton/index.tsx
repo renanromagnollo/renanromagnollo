@@ -13,6 +13,7 @@ const SkillButtonTag = styled.button`
     height: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /* border-radius: 5px; */
     outline: none;
     border: none;
@@ -33,6 +34,25 @@ const TitlesArea = styled.div`
     }
 `
 
+const IconArea = styled.div`
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    align-self: flex-end;
+    /* margin: 20px; */
+    /* padding: 40px 30px; */
+    /* margin-bottom: 20px; */
+    font-size: large;
+    /* background-color: purple; */
+
+    span {
+        /* background-color: blue; */
+    }
+`
+
 export default function SkillButton({title='Skill Button'} : SkillButtonProps){
     return(
         <SkillButtonTag>
@@ -40,6 +60,7 @@ export default function SkillButton({title='Skill Button'} : SkillButtonProps){
                 <h6>{title}</h6>
                 <span>Lorem ipsum dolor sit.</span>
             </TitlesArea>
+            <IconArea><span>+</span></IconArea>
         </SkillButtonTag>
     )
 }

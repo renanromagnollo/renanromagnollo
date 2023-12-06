@@ -9,6 +9,8 @@ interface TechSectionProps {
 const ContainerTech = styled.section`
     width: 80%;
     padding: 20px;
+    margin: 20px 0;
+
     /* margin: auto 10vw; */
     background-color: ${({theme}) => theme.colors.dark.light};
     display: flex;
@@ -17,43 +19,48 @@ const ContainerTech = styled.section`
     align-items: flex-start;
     gap: 20px;
 
-    > h2 {
+    > h4 {
         span {
             color: ${({theme}) => theme.colors.primary.default};
         }
     }
 
 `
-
-
 const ContainerContent = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 80vw;
-    /* gap: 20px; */
+    width: 100%;
+    padding: 30px;
+    /* background-color: blue; */
+    gap: 20px;
     
-    `
-    const ButtonsSection = styled.section`
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 10px;
-        /* padding: 20px auto; */
-    `
+`
+const ButtonsSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+`
+
+const ContentSection = styled.div`
+    /* background-color: gray; */
+    width: 100%;
+`
 
 export function TechSection({name='TechSection'} : TechSectionProps){
     return(
         <ContainerTech>
-            <h2>Tech<span>Skills</span></h2>
+            <h4>Tech<span>Skills</span></h4>
             <ContainerContent>
                 <ButtonsSection>
                     <SkillButton/>
                     <SkillButton/>
                 </ButtonsSection>
-                <div>
-                    Skill content...
-                </div>
+                <ContentSection>
+                    <h5>{name}</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam sapiente, tempora ratione quod doloribus sequi illum accusantium non ex quas nisi quasi ducimus vel fugiat nesciunt, facilis dignissimos pariatur amet exercitationem alias quisquam corporis iusto deserunt! Doloremque excepturi, esse laudantium magni a cupiditate temporibus ad dolor praesentium pariatur tenetur et quos culpa assumenda deserunt. Numquam voluptate officiis praesentium eum.</p>
+                </ContentSection>
             </ContainerContent>
         </ContainerTech>
     )
