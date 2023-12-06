@@ -8,20 +8,32 @@ interface ProjectsProps {
 
 const ProjectsContainer = styled.section`
     width: 100vw;
+    padding: 8vh 0;
     background-color: ${({theme}) => theme.colors.dark.light};
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    /* gap: 20vh; */
+    
+    `
 
+const CardsContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    padding: 8vh 0;
 `
 export function Projects(props : ProjectsProps){
     return(
         <ProjectsContainer>
             <TitleSection/>
-            <div>
+            <CardsContainer>
                 <CardContent title='Título' text='Text...'/>
-            </div>
+                <CardContent title='Título' text='Text...'/>
+                <CardContent title='Título' text='Text...'/>
+            </CardsContainer>
         </ProjectsContainer>
     )
 }

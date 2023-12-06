@@ -14,7 +14,7 @@ interface CardContainerProps {
 }
 
 const CardContainer = styled.div<CardContainerProps>`
-    background-color: ${({theme}) => lighten(0.1, theme.colors.dark.light)};
+    background-color: ${({theme}) => lighten(0.1, theme.colors.dark.dark)};
     min-width: 310px;
     max-width: 15vw;
     height: 360px;
@@ -22,6 +22,34 @@ const CardContainer = styled.div<CardContainerProps>`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 7px;
+    cursor: pointer;
+
+
+    > div {
+        height: 70%;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+
+        h5, p {
+            color: ${({theme}) => theme.colors.light.dark};
+            transition: all 1s;
+
+            &:hover {
+                color: ${({theme}) => theme.colors.light.default};
+            }
+        }
+
+        span {
+            color: ${({theme}) => theme.colors.primary.default};
+            font: ${({theme}) => theme.fonts.smallBold}
+        }
+    }
+ 
 `
 
 
@@ -41,7 +69,7 @@ export function CardContent(props : CardContentProps){
                 />
             
             <div>
-                <h6>Título</h6>
+                <h5>Título</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
                 <span>Saiba mais</span>
 
