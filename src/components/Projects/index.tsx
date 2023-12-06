@@ -28,7 +28,7 @@ const CardsContainer = styled.div`
 export function Projects(props : ProjectsProps){
     return(
         <ProjectsContainer>
-            <TitleSection title="Meus Projetos" subtitle="Alguns projetos pessoais..." path="/projetos"/>
+            <TitleSection title="Alguns Projetos" subtitle="Projetos de desenvolvimento de aplicações..." path="/projetos"/>
             <CardsContainer>
                 <CardContent title='Título' text='Text...'/>
                 <CardContent title='Título' text='Text...'/>

@@ -18,9 +18,10 @@ const ContainerTag = styled.div`
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 1.5vh;
         }
 
-        h4 {
+        h5 {
             color: ${({theme}) =>  theme.colors.primary.default}
         }
 
@@ -35,7 +36,7 @@ export function TitleSection({title='Section Title', path='/path', subtitle=`lor
     return(
         <ContainerTag>
             <div>
-                <h4>{path}</h4>
+                <h5>{path}</h5>
                 <h1>{title}</h1>
                 <p>{sub}</p>
 
