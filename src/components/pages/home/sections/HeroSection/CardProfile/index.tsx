@@ -1,13 +1,18 @@
 import Image from "next/image"
 import styled from "styled-components"
+import { light } from '@/styles/themes/light';
+import { ReactIcon } from "@/components/icons/reactIcon";
+import { PhotoshopIcon } from "@/components/icons/photoshopIcon";
+import { FigmaIcon } from "@/components/icons/figmaIcon";
+import { JavascriptIcon } from "@/components/icons/javascriptIcon";
 
 interface CardProfileProps {
 
 }
 
 const CardBox = styled.div`
-    width: 18vw;
-    height: 60vh;
+    width: 250px;
+    height: 400px;
     /* padding: 5vh; */
     /* background-color: ${({theme}) => theme.colors.dark.light}; */
     display: flex;
@@ -61,22 +66,26 @@ const CardBox = styled.div`
         justify-content: space-evenly;
         align-items: flex-end;
         padding: 20px;
+        margin-bottom: 10px;
         /* background-color: pink; */
         
-        h5 {
-            color: ${({theme}) => theme.colors.dark.light};
+        h5, span {
+            color: ${({theme}) => theme.colors.dark.dark};
         }
+        
 
-        div {
+        > div {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;
         }
 
+
+
         span {
             font-size: 1.5rem;
-            color: ${({theme}) => theme.colors.dark.dark};
+            /* color: ${({theme}) => theme.colors.dark.dark}; */
         }
     }
 `
@@ -94,6 +103,12 @@ export function CardProfile(props : CardProfileProps){
                 style={{width: '120px', height:'120px', objectFit: 'contain'}}
             />
             <div>
+                <div style={{display: 'flex', flexDirection: 'row', margin: '10px 0'}}>
+                    <ReactIcon/>
+                    <PhotoshopIcon/>
+                    <FigmaIcon/>
+                    <JavascriptIcon/>
+                </div>
                 <h5>R. Romagnollo</h5>
                 <div>
                     <span>renanromagnollo@gmail.com</span>
