@@ -31,7 +31,7 @@ export default {
         h5: fontAtributes('Kanit', 'normal', 400, '2.3rem', '120%'),
         h6: fontAtributes('Kanit', 'normal', 400, '1.9rem', '120%'),
         h6Bold: fontAtributes('Kanit', 'normal', 700, '1.9rem', '120%'),
-        p: fontAtributes('Quicksand', 'normal', 400, '1.6rem', '150%'),
+        p: fontAtributes('Quicksand', 'normal', 400, '1.8rem', '150%'),
         pBold: fontAtributes('Quicksand', 'normal', 700, '1.6rem', '150%'),
         small: fontAtributes('Quicksand', 'normal', 400, '1.3rem', '150%'),
         smallBold: fontAtributes('Quicksand', 'normal', 700, '1.3rem', '150%'),

@@ -2,11 +2,16 @@ import { ButtonTag } from "@/components/Button";
 import {AiOutlineArrowDown} from 'react-icons/ai'
 import styled from "styled-components";
 
-import { Freehand } from 'next/font/google'
+import { Freehand, Nothing_You_Could_Do } from 'next/font/google'
 import Image from "next/image";
 import { CardProfile } from "./CardProfile";
 
 const freehand = Freehand({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap',
+})
+const nothingYouCouldDo = Freehand({
     weight: '400',
     subsets: ['latin'],
     display: 'swap',
@@ -25,7 +30,6 @@ const SectionTag = styled.section`
 
         p {
             color: ${({theme}) =>  theme.colors.light.dark};
-            font-size: 1.8rem;
         }
         
         /* background-color: blue; */
@@ -58,7 +62,7 @@ export function HeroSection(props : HeroSectionProps){
         <SectionTag>
             <div className="container">
                 <div>
-                    <h5>Olá! Meu nome é <span className={freehand.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5>
+                    <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5>
                     <h4>I'm a <span>Front-End Developer</span></h4>
                     <p style={{width: '40vw'}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, iure numquam. Expedita vel voluptatum illo laudantium harum accusantium fugit labore, debitis perferendis minus obcaecati voluptates temporibus necessitatibus veritatis recusandae nostrum repellendus ex accusamus placeat! Officia non, voluptatibus optio odio illum incidunt qui deleniti aspernatur at modi maiores nihil minus quasi nostrum voluptatum veniam reprehenderit repellat placeat sit? Quos nihil laboriosam, tenetur atque facere maiores maxime placeat. Totam nam maiores quia explicabo unde reprehenderit atque saepe dolorum officiis vero nostrum nisi molestiae iste, dignissimos et, consectetur voluptate? Vel modi labore obcaecati quas laborum nobis, tenetur quod accusamus accusantium sed asperiores repudiandae.</p>
                     <div>

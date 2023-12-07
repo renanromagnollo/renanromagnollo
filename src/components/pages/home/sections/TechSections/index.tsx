@@ -46,6 +46,10 @@ const ButtonsSection = styled.div`
 const ContentSection = styled.div`
     /* background-color: gray; */
     width: 100%;
+
+    > p {
+        color: ${({theme}) => theme.colors.light.dark}
+    }
 `
 
 export function TechSection({name='TechSection'} : TechSectionProps){
