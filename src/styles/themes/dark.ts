@@ -1,19 +1,20 @@
-interface fontAtributesProps {
-    fontFamily: string, 
-    fontStyle: string, 
-    fontWeight: number, 
-    fontSize: string, 
-    lineHeight: string
-}
+// interface fontAtributesProps {
+//     fontFamily: string, 
+//     fontStyle: string, 
+//     fontWeight: number, 
+//     fontSize: string, 
+//     lineHeight: string
+// }
 
 export function fontAtributes(fontFamily: string, fontStyle: string, fontWeight: number, 
-                        fontSize: string, lineHeight: string): fontAtributesProps {
+                        fontSize: string, lineHeight: string, color='black') {
     return {
         fontFamily,
         fontStyle,
         fontWeight,
         fontSize,
-        lineHeight
+        lineHeight,
+        color
     }
 }
 

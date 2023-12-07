@@ -22,6 +22,11 @@ const SectionTag = styled.section`
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        p {
+            color: ${({theme}) =>  theme.colors.light.dark};
+            font-size: 1.8rem;
+        }
         
         /* background-color: blue; */
     }
