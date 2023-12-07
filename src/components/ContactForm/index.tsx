@@ -6,6 +6,7 @@ import {zodResolver} from '@hookform/resolvers/zod'
 
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { ButtonTag } from "../Button";
+import styled from "styled-components";
 
 const contactFormSchema = z.object({
     name: z.string().min(3).max(100),
@@ -13,8 +14,19 @@ const contactFormSchema = z.object({
     message: z.string().min(1).max(500),
 })
 
+// interface containerContactProps {
+//     id: string
+// }
+
+
 type ContactFormData = z.infer<typeof contactFormSchema>
 
+const containerContactTag = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+`
 export function ContactForm(){
 
     const {handleSubmit, register} = useForm<ContactFormData>({
@@ -26,10 +38,11 @@ export function ContactForm(){
     }
 
     return(
-        <section id="contact">
-            <div>
+        <div id="contact">
+        
                 <h1>Contato</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                
                     <input 
                         placeholder="Nome"
                         type="text" 
@@ -49,7 +62,8 @@ export function ContactForm(){
                         <HiArrowNarrowRight size={18} />
                     </ButtonTag>
                 </form>
-            </div>
-        </section>
+
+            
+        </div>
     )
 }

@@ -3,6 +3,8 @@ import {AiOutlineArrowDown} from 'react-icons/ai'
 import styled from "styled-components";
 
 import { Freehand } from 'next/font/google'
+import Image from "next/image";
+import { CardProfile } from "./CardProfile";
 
 const freehand = Freehand({
     weight: '400',
@@ -33,6 +35,8 @@ const SectionTag = styled.section`
     }
 `
 
+
+
 interface HeroSectionProps {
 
 }
@@ -62,9 +66,9 @@ export function HeroSection(props : HeroSectionProps){
                         </ButtonTag>
                     </div>
                 </div>
-                <div style={{width: '250px', height: '300px', backgroundColor: 'darkgray'}}>
-                    Image...
-                </div>
+                    <CardProfile/>
+                {/* <div style={{width: '250px', height: '300px', backgroundColor: 'darkgray'}}>
+                </div> */}
             </div>
         </SectionTag>
     )
