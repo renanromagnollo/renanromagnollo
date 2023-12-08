@@ -1,12 +1,18 @@
-import { PageIntroduction } from "@/components/pages/projects/page-introduction";
+'use client'
+
+import styled from "styled-components"
 
 interface ProjectsProps {
 
 }
-export function Projects(props : ProjectsProps){
+
+const ContainerProjects = styled.div`
+    background-color: ${({theme}) => theme.colors.dark.dark};
+`
+export default function Projects(props : ProjectsProps){
     return(
-        <>
-            <PageIntroduction />
-        </>
+        <ContainerProjects>
+            <h1>Projects...</h1>
+        </ContainerProjects>
     )
 }

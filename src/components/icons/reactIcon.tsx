@@ -1,7 +1,7 @@
 // interface ReactIconProps {
 //     // size: 
 // }
-export function ReactIcon({size='40px'} : {size: string}){
+export function ReactIcon({size='45px'} : {size: string}){
     return(
         <>
             <svg fill="#000000" 

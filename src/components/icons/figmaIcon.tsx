@@ -1,10 +1,8 @@
-interface FigmaIconProps {
 
-}
-export function FigmaIcon(props : FigmaIconProps){
+export function FigmaIcon({size='45px'}){
     return(
         <>
-            <svg width="40px" height="40px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width={size} height={size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
