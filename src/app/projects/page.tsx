@@ -9,13 +9,15 @@ interface ProjectsProps {
 
 const ContainerProjects = styled.section`
     margin: 0;
-    padding: 0;
+    padding: 50px 0;
     background-color: ${({theme}) => theme.colors.dark.dark};
-    width: 100vw;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     /* grid-template-columns: 1; */
-    gap: 10px;
+    gap: 5vw;
 
 `
 export default function Projects(props : ProjectsProps){

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import styled from "styled-components"
 
 interface TitleSectionProps {
@@ -30,13 +31,13 @@ const ContainerTag = styled.div`
         }
 
     `
-export function TitleSection({title='Section Title', path='/path', subtitle=`lorem`}: TitleSectionProps){
+export function TitleSection({title='Section Title', path='/#', subtitle=`lorem`}: TitleSectionProps){
     let sub = subtitle === 'lorem' ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' : subtitle
     
     return(
         <ContainerTag>
             <div>
-                <h5>{path}</h5>
+                <Link href={path}><h5>/projetos</h5></Link>          
                 <h1>{title}</h1>
                 <p>{sub}</p>
 
