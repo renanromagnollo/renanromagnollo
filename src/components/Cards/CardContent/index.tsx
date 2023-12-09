@@ -2,6 +2,7 @@ import { ReactNode } from "react"
 import styled from "styled-components"
 import { lighten } from 'polished';
 import  Image  from 'next/image';
+import Link from "next/link";
 
 interface CardContentProps {
     title: string
@@ -54,27 +55,32 @@ const CardContainer = styled.div<CardContainerProps>`
 
 
 
-export function CardContent(props : CardContentProps){
+export function CardContent({title='Título', text='texto...'} : CardContentProps){
     return(
-        <CardContainer>
-                <Image
-                    src="http://picsum.photos/200/300"
-                    width={0}
-                    height={0}
-                    alt="Image"
-                    loading="lazy"
-                    sizes="100vw"
-                    style={{ width: '100%', height: '40%', objectFit: 'cover'}}
-                    
-                />
-            
-            <div>
-                <h5>Título</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
-                <span>Saiba mais</span>
+            <Link href={`/projects/${title}`}>
+                <CardContainer>
+                    <Image
+                        src="http://picsum.photos/200/300"
+                        width={0}
+                        height={0}
+                        alt="Image"
+                        loading="lazy"
+                        sizes="100vw"
+                        style={{ width: '100%', height: '40%', objectFit: 'cover'}}
+                        unoptimized
+                        
+                    />
+                
+                <div>
+                    <h5>Título</h5>
+                    {text==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
+                        : text
+                    }
+                    <span>Saiba mais</span>
 
-            </div>
+                </div>
+            </CardContainer>
+        </Link>
 
-        </CardContainer>
     )
 }

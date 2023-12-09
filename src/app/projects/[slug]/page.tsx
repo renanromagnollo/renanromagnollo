@@ -1,6 +1,12 @@
 
-export default function Project() {
+interface ProjectProps {
+    params: {
+        slug: string
+    }
+}
+
+export default function Project({params}: ProjectProps) {
     return (
-        <h1>The Project</h1>        
+        <h1>Project: {params.slug}</h1>        
     )
 }
