@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import {z} from 'zod'
 import {zodResolver} from '@hookform/resolvers/zod'
 
+// import { memo } from "react";
+
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { ButtonTag } from "../Button";
 import styled from "styled-components";

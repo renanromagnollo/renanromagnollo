@@ -62,7 +62,7 @@ export function Header() {
                             <NavItem {...item} key={item.label}/>
                         ))}
                     </nav>
-                    <div className="switch">
+                    {/* <div className="switch">
                         <Switch 
                             onChange={toggleTheme => console.log('mudou tema!')}
                             // checked={}
@@ -74,7 +74,7 @@ export function Header() {
                             offColor={'#111'}
                             onColor={'#F3F3F3'}
                         />
-                    </div>
+                    </div> */}
                 </div>
             </HeaderStyle>
 
