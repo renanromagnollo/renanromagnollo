@@ -13,8 +13,8 @@ export const fetchHygraphQuery = async (query: string) => {
                 Authorization: `Bearer ${process.env.NEXT_PUBLIC_HIGRAPH_TOKEN}`,
             },
             next: {
-                // revalidate: 60 * 60 * 24 // 24h
-                revalidate: 5,
+                revalidate: 60 * 60 * 24 // 24h
+                // revalidate: 5,
             },
             
             body: JSON.stringify({ query, }),

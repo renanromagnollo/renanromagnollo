@@ -29,9 +29,23 @@ const SectionTag = styled.section`
         justify-content: space-evenly;
         align-items: center;
 
-        p {
-            color: ${({theme}) =>  theme.colors.light.dark};
+        > div {
+            p {
+                color: ${({theme}) =>  theme.colors.light.dark};
+                height: 14vh;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
         }
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+            p {
+                width: 100%;
+            }
+        }
+
         
         /* background-color: blue; */
     }
@@ -48,19 +62,15 @@ const SectionTag = styled.section`
 
 
 interface HeroSectionProps {
+    title: string
+    subtitle?: string
+    text?: string
 }
 
 
 
-const heroQuery = async () => {
-  const response = await getHeroData()
 
-  console.log('heroQuery: ', response?.data)
-
-  return response?.data
-
-}
-export function HeroSection(props : HeroSectionProps){
+export function HeroSection({title, subtitle, text} : HeroSectionProps){
 
 
     // console.log('responseData: ', responseData)
@@ -77,9 +87,10 @@ export function HeroSection(props : HeroSectionProps){
         <SectionTag>
             <div className="container">
                 <div>
-                    <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5>
+                    {/* <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5> */}
+                    {title || <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5>}
                     <h4>I'm a <span>Front-End Developer</span></h4>
-                    <p style={{width: '40vw'}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, iure numquam. Expedita vel voluptatum illo laudantium harum accusantium fugit labore, debitis perferendis minus obcaecati voluptates temporibus necessitatibus veritatis recusandae nostrum repellendus ex accusamus placeat! Officia non, voluptatibus optio odio illum incidunt qui deleniti aspernatur at modi maiores nihil minus quasi nostrum voluptatum veniam reprehenderit repellat placeat sit? Quos nihil laboriosam, tenetur atque facere maiores maxime placeat. Totam nam maiores quia explicabo unde reprehenderit atque saepe dolorum officiis vero nostrum nisi molestiae iste, dignissimos et, consectetur voluptate? Vel modi labore obcaecati quas laborum nobis, tenetur quod accusamus accusantium sed asperiores repudiandae.</p>
+                    <p style={{width: '40vw'}}>{text}</p>
                     <div>
                         techs
                     </div>

@@ -60,10 +60,11 @@ export default function Home() {
     
   }, [])
 
+
   return (
         <ContainerHome>
           <GlobalStyle />
-          <HeroSection/>
+          <HeroSection text={hero?.hero?.text?.text}/>
           <TechSection/>
           <Projects/>
           <BlogSection/>
