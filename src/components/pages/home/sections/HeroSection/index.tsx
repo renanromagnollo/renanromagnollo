@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Freehand, Nothing_You_Could_Do } from 'next/font/google'
 import Image from "next/image";
 import { CardProfile } from "./CardProfile";
+import { fetchHygraphQuery } from "@/utils/fetchHygraph";
 
 const freehand = Freehand({
     weight: '400',
@@ -47,9 +48,23 @@ const SectionTag = styled.section`
 
 
 interface HeroSectionProps {
+}
+
+
+
+const heroQuery = async () => {
+  const response = await getHeroData()
+
+  console.log('heroQuery: ', response?.data)
+
+  return response?.data
 
 }
 export function HeroSection(props : HeroSectionProps){
+
+
+    // console.log('responseData: ', responseData)
+
 
     const handleContact = () => {
         const contactSection = document.querySelector('#contact')

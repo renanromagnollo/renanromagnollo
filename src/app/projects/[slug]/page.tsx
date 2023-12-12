@@ -21,7 +21,6 @@ const getProjectData = async () => {
             raw
           }
         }
-        projects
       }
     `
       return fetchHygraphQuery( query )
@@ -33,9 +32,9 @@ const getProjectData = async () => {
 }
 
 export default async function Project({params}: ProjectProps) {
-    const response = await getProjectData()
+    // const response = await getProjectData()
 
-    console.log('Response Hygraph ProjectQuery: ', response)
+    // console.log('Response Hygraph ProjectQuery: ', response)
     return (
         <h1>Project: {params.slug}</h1>        
     )
