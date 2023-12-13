@@ -45,20 +45,23 @@ const getHeroData = async () => {
 export default function Home() {
   
   const [hero, setHero] = useState(null)
+  const [techskills, setTechskills] = useState(null)
 
   
   useEffect(() => {
-      const heroQuery = async () => {
-        // const response = await getHeroData()
-        const response = await getFakeData('hero')
-        if(response) setHero(response)
-    
-        console.log('heroQuery: ', response)
-    
-        return response
-    
-      }
-      heroQuery()
+    const allQueries = async () => {
+      // const hero = await getHeroData()
+      const hero = await getFakeData('hero')
+      if(hero) setHero(hero)
+      const techskills = await getFakeData('techskills')
+      if(techskills) setTechskills(techskills)
+  
+      console.log('allQueries: ', techskills)
+  
+      // return hero
+  
+    }
+    allQueries()
     
   }, [])
 
@@ -67,8 +70,8 @@ export default function Home() {
         <ContainerHome>
           <GlobalStyle />
           {/* <HeroSection text={hero?.hero?.text?.text}/> */}
-          <HeroSection text={hero?.hero?.text?.text}/>
-          <TechSection/>
+          <HeroSection text={hero?.hero?.text?.text} />
+          <TechSection data={techskills}/>
           <Projects/>
           <BlogSection/>
           <Link href="/articles">Articles</Link>

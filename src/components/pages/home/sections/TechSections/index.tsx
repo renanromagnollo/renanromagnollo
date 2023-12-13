@@ -1,12 +1,14 @@
 import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 import SkillButton from "./SkillButton"
+import { getFakeData } from "@/utils/fakeServer"
 
 interface TechSectionProps {
-    name: string
+    name: string,
+    data: any
 }
 
-const ContainerTech = styled.section`
+const ContainerTech = styled.div`
     width: 80%;
     padding: 20px;
     margin: 20px 0;
@@ -42,7 +44,6 @@ const ButtonsSection = styled.div`
     align-items: center;
     gap: 15px;
 `
-
 const ContentSection = styled.div`
     /* background-color: gray; */
     width: 100%;
@@ -52,18 +53,24 @@ const ContentSection = styled.div`
     }
 `
 
-export function TechSection({name='TechSection'} : TechSectionProps){
+export function TechSection({name='TechSection', data} : TechSectionProps){
+
+    // const tech = await getFakeData('techskills')
+    // console.log('tech: ', tech)
+    console.log('techs data: ', data?.techSkills)
+
     return(
         <ContainerTech>
             <h4>Tech<span>Skills</span></h4>
             <ContainerContent>
                 <ButtonsSection>
-                    <SkillButton/>
-                    <SkillButton/>
+                    {data?.techSkills.map((t, i) => <SkillButton key={i} title={t.title} subtitle={t.subtitle}/>)}
+                    {/* <SkillButton/>
+                    <SkillButton/> */}
                 </ButtonsSection>
                 <ContentSection>
                     <h5>{name}</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam sapiente, tempora ratione quod doloribus sequi illum accusantium non ex quas nisi quasi ducimus vel fugiat nesciunt, facilis dignissimos pariatur amet exercitationem alias quisquam corporis iusto deserunt! Doloremque excepturi, esse laudantium magni a cupiditate temporibus ad dolor praesentium pariatur tenetur et quos culpa assumenda deserunt. Numquam voluptate officiis praesentium eum.</p>
+                    <p>Interface...</p>
                 </ContentSection>
             </ContainerContent>
         </ContainerTech>

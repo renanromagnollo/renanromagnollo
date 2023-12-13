@@ -33,7 +33,6 @@ const TitlesArea = styled.div`
         color: ${({theme}) => theme.colors.light.default};
     }
 `
-
 const IconArea = styled.div`
     width: 20%;
     height: 50%;
@@ -53,12 +52,12 @@ const IconArea = styled.div`
     }
 `
 
-export default function SkillButton({title='Skill Button'} : SkillButtonProps){
+export default function SkillButton({title='Skill Button', subtitle='Subtitle...'} : SkillButtonProps){
     return(
         <SkillButtonTag>
             <TitlesArea>
                 <h6>{title}</h6>
-                <span>Lorem ipsum dolor sit.</span>
+                <span>{subtitle}</span>
             </TitlesArea>
             <IconArea><span>+</span></IconArea>
         </SkillButtonTag>
