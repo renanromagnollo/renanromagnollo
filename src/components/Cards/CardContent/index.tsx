@@ -5,9 +5,9 @@ import  Image  from 'next/image';
 import Link from "next/link";
 
 interface CardContentProps {
-    title: string
-    text: string
-    
+    title?: string
+    text?: string
+    img?: string    
 }
 
 interface CardContainerProps {
@@ -55,12 +55,12 @@ const CardContainer = styled.div<CardContainerProps>`
 
 
 
-export function CardContent({title='Título', text='texto...'} : CardContentProps){
+export function CardContent({title='Título', text='texto...', img} : CardContentProps){
     return(
             <Link href={`/projects/${title}`}>
                 <CardContainer>
                     <Image
-                        src="http://picsum.photos/200/300"
+                        src={img}
                         width={0}
                         height={0}
                         alt="Image"
@@ -72,7 +72,7 @@ export function CardContent({title='Título', text='texto...'} : CardContentProp
                     />
                 
                 <div>
-                    <h5>Título</h5>
+                    <h5>{title}</h5>
                     {text==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
                         : text
                     }
