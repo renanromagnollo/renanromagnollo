@@ -69,7 +69,7 @@ export function TechSection({name='TechSection', data} : TechSectionProps){
                     <SkillButton/> */}
                 </ButtonsSection>
                 <ContentSection>
-                    <h5>{name}</h5>
+                <h5>{name}</h5>
                     <p>Interface...</p>
                 </ContentSection>
             </ContainerContent>

@@ -4,7 +4,7 @@ import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 
 interface BlogSectionProps {
-
+    data: any
 }
 
 const ContainerBlogSection = styled.section`
@@ -26,14 +26,18 @@ const CadsArea = styled.div`
     /* background-color: blue; */
 `
 
-export function BlogSection(props : BlogSectionProps){
+export function BlogSection({data} : BlogSectionProps){
     return(
         <ContainerBlogSection>
             <TitleSection title="Blog"/>
             <CadsArea>
+                {data?.blogs?.map((post, i) => {
+                        // console.log('BLOG: ', post?.image?.url)
+                        return <CardTitle key={i} title={post.title} img={post?.image?.url}/>})
+                    }
+                {/* <CardTitle/>
                 <CardTitle/>
-                <CardTitle/>
-                <CardTitle/>
+                <CardTitle/> */}
             </CadsArea>
         </ContainerBlogSection>
     )

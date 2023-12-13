@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { TitleSection } from "../../../../TitleSection"
-import { CardContent } from "../../../../Cards/CardContent"
+import { CardProject } from "../../../../Cards/CardProject"
 
 interface ProjectsProps {
     data: any
@@ -34,12 +34,12 @@ export function Projects({data} : ProjectsProps){
             <CardsContainer>
                 {data?.projects?.map((project, i) => {
                     console.log('project Title: ', project.title)
-                    return <CardContent key={i} title={project.title} img={project.img[0].url}/>
+                    return <CardProject key={i} title={project.title} img={project.img[0].url}/>
                 
                 })}
-                {/* <CardContent title='Título' text='Text...'/>
-                <CardContent title='Título' text='Text...'/>
-                <CardContent title='Título' text='Text...'/> */}
+                {/* <CardProject title='Título' text='Text...'/>
+                <CardProject title='Título' text='Text...'/>
+                <CardProject title='Título' text='Text...'/> */}
             </CardsContainer>
         </ProjectsContainer>
     )

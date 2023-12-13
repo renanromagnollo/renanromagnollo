@@ -10,3 +10,4 @@
 # Logo
 # RichTexts
 # Responsivity
+# truncate texts

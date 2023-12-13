@@ -47,6 +47,7 @@ export default function Home() {
   const [hero, setHero] = useState(null)
   const [techskills, setTechskills] = useState(null)
   const [projects, setProjects] = useState(null)
+  const [blog, setBlog] = useState(null)
 
   
   useEffect(() => {
@@ -58,8 +59,10 @@ export default function Home() {
       if(techskills) setTechskills(techskills)
       const projects = await getFakeData('projects')
       if(projects) setProjects(projects)
+      const blog = await getFakeData('blog')
+      if(blog) setBlog(blog)
   
-      console.log('allQueries: ', projects)
+      console.log('blogData: ', blog.blogs)
   
       // return hero
   
@@ -76,7 +79,7 @@ export default function Home() {
           <HeroSection text={hero?.hero?.text?.text} />
           <TechSection data={techskills}/>
           <Projects data={projects}/>
-          <BlogSection/>
+          <BlogSection data={blog}/>
           <Link href="/articles">Articles</Link>
         </ContainerHome>
 

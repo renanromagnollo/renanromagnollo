@@ -124,6 +124,9 @@
 							}
 						]
 					}
+				},
+				"image": {
+					"url": "https://media.graphassets.com/JfReDdwTBm7hvzSF6M5r"
 				}
 			},
 			{
@@ -252,7 +255,8 @@
 							}
 						]
 					}
-				}
+				},
+				"image": null
 			},
 			{
 				"slug": null,
@@ -364,12 +368,15 @@
 							}
 						]
 					}
+				},
+				"image": {
+					"url": "https://media.graphassets.com/2Z65R0KZTPy7xYhoKeYe"
 				}
 			}
 		]
 	},
 	"extensions": {
-		"Complexity-Cost-Left": 999999989,
+		"Complexity-Cost-Left": 999999985,
 		"Effective-Complexity-Limit": 1000000000
 	}
 }
