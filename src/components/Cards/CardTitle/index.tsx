@@ -18,6 +18,7 @@ const CardTitleBox = styled.div`
     border: solid 4px;
     border-color: ${({theme}) => theme.colors.dark.dark};
     overflow: hidden;
+    /* opacity: .5; */
 
     > img {
         z-index: -20px;
@@ -41,6 +42,10 @@ const ContentCard = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    opacity: .9;
+    transform: all ease-in .3s;
+
+    
     > h5 {
         /* z-index: 60px; */
         /* position: absolute; */
@@ -55,11 +60,21 @@ const ContentCard = styled.div`
         color: ${({theme}) => theme.colors.primary.default};
         opacity: 0.9;
     }
-    > p {
-        margin: 10px;
-        text-align: end;
+    
+    &:hover {
+        > p {
+            height: 100%;
+            padding: 10px;
+        }
     }
-`
+    
+    > p {
+        height: 0;
+        /* padding: 10px; */
+        text-align: end;
+        transition: all .3s;
+    }
+    `
 
 export function CardTitle({title, img='http://picsum.photos/200/600'} : CardTitleProps){
     let tit = !title ? 'Lorem ipsum dolor sit amet.' : title

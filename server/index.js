@@ -2,7 +2,7 @@ const hero = require('./hero.json');
 const tecnologies = require('./tecnologies.json')
 const techskills = require('./techskills.json')
 const socials = require('./socials.json')
-const blogs = require('./blogs.json')
+const blog = require('./blog.json')
 const projects = require('./projects.json')
 
 
@@ -11,6 +11,6 @@ module.exports = () => ({
     tecnologies,
     techskills,
     socials,
-    blogs,
+    blog,
     projects
 })
