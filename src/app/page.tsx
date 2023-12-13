@@ -12,6 +12,7 @@ import { BlogSection } from "@/components/pages/home/sections/BlogSection"
 import { TechSection } from "@/components/pages/home/sections/TechSections"
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { useEffect, useState } from "react"
+import { getFakeData } from "@/utils/fakeServer"
 
 const ContainerHome = styled.div`
   display: flex;
@@ -48,7 +49,8 @@ export default function Home() {
   
   useEffect(() => {
       const heroQuery = async () => {
-        const response = await getHeroData()
+        // const response = await getHeroData()
+        const response = await getFakeData('hero')
         if(response) setHero(response)
     
         console.log('heroQuery: ', response)

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server ./server/index.js -w -d 750 -p 3000"
+    "server": "json-server ./server/index.js -w -d 750 -p 3333"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",

@@ -26,6 +26,7 @@ export const fetchHygraphQuery = async (query: string) => {
     
         return data
         
+        
     } catch (error) {
         console.log(error)
     }
