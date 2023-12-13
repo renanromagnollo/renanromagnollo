@@ -1,0 +1,129 @@
+{
+	"data": {
+		"projects": [
+			{
+				"title": null,
+				"img": [
+					{
+						"url": "https://media.graphassets.com/ZEyqlX6ZQY6wpRCAXO89"
+					}
+				],
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "\n"
+									},
+									{
+										"bold": true,
+										"text": "\"Inovação em Ação: Desenvolvimento com Tecnologia de Ponta"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Bem-vindo ao meu projeto, um resultado empolgante da convergência entre criatividade e tecnologia avançada. Utilizando um conjunto de ferramentas poderosas, incluindo JavaScript, Next.js, React.js, uma API robusta e o design detalhado no Figma, este projeto é o resultado de uma jornada de desenvolvimento inovadora."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "JavaScript:"
+									},
+									{
+										"text": " A base deste projeto, oferecendo flexibilidade e dinamismo para criar uma experiência interativa e responsiva para os usuários."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Next.js e React.js:"
+									},
+									{
+										"text": " A combinação perfeita para a construção de interfaces modernas e eficientes. O Next.js traz a vantagem de renderização do lado do servidor, garantindo velocidade e SEO aprimorado, enquanto o React.js oferece uma estrutura sólida para componentes reutilizáveis e uma experiência de usuário fluida."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "API:"
+									},
+									{
+										"text": " A espinha dorsal que conecta e fornece dados dinâmicos ao projeto. Essa integração possibilita uma experiência personalizada e em tempo real para os usuários finais."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Figma:"
+									},
+									{
+										"text": " O ponto de partida para a materialização de ideias, permitindo o design e a prototipagem detalhados que se traduzem diretamente na experiência final do usuário."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "O processo de desenvolvimento foi pautado na busca incessante pela excelência, desde a concepção inicial até a estruturação final. Cada tecnologia foi meticulosamente selecionada para agregar valor, escalabilidade e eficiência ao projeto."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A estrutura resultante é uma sinergia entre o poder das tecnologias mais atuais e eficientes disponíveis. Cada uma delas foi escolhida estrategicamente para garantir não apenas a qualidade do produto final, mas também para manter o projeto alinhado com as tendências tecnológicas emergentes."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Este projeto não é apenas uma representação do presente, mas um vislumbre do futuro. Uma experiência construída com as tecnologias mais avançadas do momento, visando não apenas atender às demandas atuais, mas também preparar o caminho para as inovações por vir."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Explore, experimente e mergulhe em uma experiência que reflete o compromisso com o progresso e a eficiência, impulsionado pelas tecnologias mais modernas do mercado.\""
+									}
+								]
+							}
+						]
+					}
+				},
+				"technologies": [
+					{
+						"name": "NextJS"
+					}
+				]
+			}
+		]
+	},
+	"extensions": {
+		"Complexity-Cost-Left": 999999990,
+		"Effective-Complexity-Limit": 1000000000
+	}
+}
