@@ -3,6 +3,7 @@ import styled from "styled-components"
 import SkillButton from "./SkillButton"
 import { getFakeData } from "@/utils/fakeServer"
 import { SkillsData } from "./SkillsData"
+import { useEffect, useState } from "react"
 
 interface TechSectionProps {
     name: string,
@@ -11,18 +12,18 @@ interface TechSectionProps {
 
 const ContainerTech = styled.div`
     width: 80%;
-    padding: 20px;
+    padding: 5rem;
     margin: 20px 0;
 
     /* margin: auto 10vw; */
     background-color: ${({theme}) => theme.colors.dark.light};
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
 
-    > h4 {
+    h4 {
         span {
             color: ${({theme}) => theme.colors.primary.default};
         }
@@ -41,9 +42,9 @@ const ContainerContent = styled.div`
 const ButtonsSection = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 3vh;
 `
 const ContentSection = styled.div`
     /* background-color: gray; */
@@ -55,24 +56,33 @@ const ContentSection = styled.div`
 `
 
 export function TechSection({name='TechSection', data} : TechSectionProps){
+    const [selected, setSelected] = useState<any>('')
 
-    // const tech = await getFakeData('techskills')
-    // console.log('tech: ', tech)
-    console.log('techs data: ', data?.techSkills)
+    const updateSelect = (clicked) => {
+        console.log('selected UPDATE: ', clicked)
+        setSelected(clicked)
+    }
+
+    useEffect(() => {
+        if(selected !== '') {
+            window.addEventListener('scroll', () => setSelected(''))
+            return
+        }
+    }, [selected])
 
     return(
         <ContainerTech>
-            <h4>Tech<span>Skills</span></h4>
-            <ContainerContent>
+            <div style={{display: 'flex', flexDirection: 'column', gap: '2rem'}}>
+                <h4>Tech<span>Skills</span></h4>
                 <ButtonsSection>
-                    {data?.techSkills.map((t, i) => <SkillButton key={i} title={t.title} subtitle={t.subtitle}/>)}
-                    {/* <SkillButton/>
-                    <SkillButton/> */}
+                    {data?.techSkills.map((category, i) => <SkillButton key={i} data={category} click={clicked => updateSelect(clicked)}/>)}
                 </ButtonsSection>
-                <ContentSection>
-                    <SkillsData/>
-                </ContentSection>
-            </ContainerContent>
+            </div>
+            <ContentSection>
+                <SkillsData select={selected}/>
+            </ContentSection>
+            {/* <ContainerContent>
+            </ContainerContent> */}
         </ContainerTech>
     )
 }

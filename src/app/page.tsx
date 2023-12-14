@@ -62,14 +62,13 @@ export default function Home() {
       const blog = await getFakeData('blog')
       if(blog) setBlog(blog)
   
-      console.log('blogData: ', blog.blogs)
-  
-      // return hero
-  
     }
     allQueries()
+    return console.log('allQueries done!')
     
   }, [])
+
+  useEffect(() => console.log('techsKills state: ', techskills), [techskills])
 
 
   return (

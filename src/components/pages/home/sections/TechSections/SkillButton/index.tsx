@@ -2,9 +2,11 @@ import styled from "styled-components"
 import { light } from '@/styles/themes/light';
 
 interface SkillButtonProps {
+    data: string
     title?: string
     subtitle?: string
     icon?: string
+    click(): (select: any) => null
 }
 
 
@@ -52,12 +54,12 @@ const IconArea = styled.div`
     }
 `
 
-export default function SkillButton({title='Skill Button', subtitle='Subtitle...'} : SkillButtonProps){
+export default function SkillButton({data, click} : SkillButtonProps){
     return(
-        <SkillButtonTag>
+        <SkillButtonTag onClick={() => click(data)}>
             <TitlesArea>
-                <h6>{title}</h6>
-                <span>{subtitle}</span>
+                <h6>{data?.title}</h6>
+                <span>{data?.subtitle}</span>
             </TitlesArea>
             <IconArea><span>+</span></IconArea>
         </SkillButtonTag>
