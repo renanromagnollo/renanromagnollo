@@ -10,6 +10,7 @@
     "server": "json-server ./server/index.js -w -d 750 -p 3333"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@hookform/resolvers": "^3.3.2",
     "@types/node": "18.15.11",
     "@types/react": "18.0.32",
