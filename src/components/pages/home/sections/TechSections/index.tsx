@@ -2,6 +2,7 @@ import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 import SkillButton from "./SkillButton"
 import { getFakeData } from "@/utils/fakeServer"
+import { SkillsData } from "./SkillsData"
 
 interface TechSectionProps {
     name: string,
@@ -69,8 +70,7 @@ export function TechSection({name='TechSection', data} : TechSectionProps){
                     <SkillButton/> */}
                 </ButtonsSection>
                 <ContentSection>
-                <h5>{name}</h5>
-                    <p>Interface...</p>
+                    <SkillsData/>
                 </ContentSection>
             </ContainerContent>
         </ContainerTech>
