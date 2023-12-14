@@ -7,9 +7,10 @@ interface SkillsDataProps {
 
 const SectionSkills = styled.section`
 width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: space-around;
 align-items: center;
 
 `
