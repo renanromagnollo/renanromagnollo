@@ -3,7 +3,7 @@ import styled from "styled-components"
 import SkillButton from "./SkillButton"
 import { getFakeData } from "@/utils/fakeServer"
 import { SkillsData } from "./SkillsData"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface TechSectionProps {
     name: string,
@@ -56,12 +56,19 @@ const ContentSection = styled.div`
 `
 
 export function TechSection({name='TechSection', data} : TechSectionProps){
-    const [selected, setSelected] = useState<any>()
+    const [selected, setSelected] = useState<any>('')
 
     const updateSelect = (clicked) => {
         console.log('selected UPDATE: ', clicked)
         setSelected(clicked)
     }
+
+    useEffect(() => {
+        if(selected !== '') {
+            window.addEventListener('scroll', () => setSelected(''))
+            return
+        }
+    }, [selected])
 
     return(
         <ContainerTech>
