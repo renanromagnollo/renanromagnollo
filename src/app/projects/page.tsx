@@ -1,7 +1,10 @@
 'use client'
 
-import { CardContent } from "@/components/Cards/CardContent"
+import { CardProject } from "@/components/Cards/CardProject"
+import { PathComponent } from "@/components/Path"
+import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
+import {useRouter} from "next/navigation"
 
 interface ProjectsProps {
 
@@ -13,23 +16,39 @@ const ContainerProjects = styled.section`
     background-color: ${({theme}) => theme.colors.dark.dark};
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     /* grid-template-columns: 1; */
     gap: 5vw;
 
+    > div {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
 `
 export default function Projects(props : ProjectsProps){
+    // const params = useRouter()
+    // console.log('params: ', params)
     return(
         <ContainerProjects>
-            <CardContent/>
-            <CardContent/>
-            <CardContent/>
-            <CardContent/>
-            <CardContent/>
-            <CardContent/>
-            <CardContent/>
+            <PathComponent/>
+            <TitleSection title="Projetos" subtitle="Alguns projetos profissionais e de estudo"></TitleSection>
+            <div>
+                <CardProject/>
+                <CardProject/>
+                <CardProject/>
+                <CardProject/>
+                <CardProject/>
+                <CardProject/>
+                <CardProject/>
+            </div>
         </ContainerProjects>
     )
 }

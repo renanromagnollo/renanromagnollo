@@ -7,7 +7,7 @@ interface TitleSectionProps {
     subtitle?: string
 }
 
-const ContainerTag = styled.div`
+export const ContainerTag = styled.div`
         width: 100%;
         display: flex;
         /* flex-direction: column; */
@@ -31,13 +31,13 @@ const ContainerTag = styled.div`
         }
 
     `
-export function TitleSection({title='Section Title', path='/#', subtitle=`lorem`}: TitleSectionProps){
+export function TitleSection({title='Section Title', subtitle=`lorem`, path}: TitleSectionProps){
     let sub = subtitle === 'lorem' ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' : subtitle
     
     return(
         <ContainerTag>
             <div>
-                <Link href={path}><h5>/projetos</h5></Link>          
+                {path ? (<Link href={path}><h5>{path}</h5></Link>) : ''}
                 <h1>{title}</h1>
                 <p>{sub}</p>
 

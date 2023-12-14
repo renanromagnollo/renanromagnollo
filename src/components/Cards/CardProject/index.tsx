@@ -55,7 +55,7 @@ const CardContainer = styled.div<CardContainerProps>`
 
 
 
-export function CardContent({title='Título', text='texto...', img} : CardContentProps){
+export function CardProject({title='Título', text='texto...', img} : CardContentProps){
     return(
             <Link href={`/projects/${title}`}>
                 <CardContainer>
@@ -73,9 +73,10 @@ export function CardContent({title='Título', text='texto...', img} : CardConten
                 
                 <div>
                     <h5>{title}</h5>
-                    {text==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
+                    {text ==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
                         : text
                     }
+                    <div>Tecnologies...</div>
                     <span>Saiba mais</span>
 
                 </div>
