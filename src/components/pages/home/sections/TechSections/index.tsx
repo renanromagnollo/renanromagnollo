@@ -12,18 +12,18 @@ interface TechSectionProps {
 
 const ContainerTech = styled.div`
     width: 80%;
-    padding: 20px;
+    padding: 5rem;
     margin: 20px 0;
 
     /* margin: auto 10vw; */
     background-color: ${({theme}) => theme.colors.dark.light};
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
 
-    > h4 {
+    h4 {
         span {
             color: ${({theme}) => theme.colors.primary.default};
         }
@@ -42,9 +42,9 @@ const ContainerContent = styled.div`
 const ButtonsSection = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 3vh;
 `
 const ContentSection = styled.div`
     /* background-color: gray; */
@@ -65,15 +65,17 @@ export function TechSection({name='TechSection', data} : TechSectionProps){
 
     return(
         <ContainerTech>
-            <h4>Tech<span>Skills</span></h4>
-            <ContainerContent>
+            <div style={{display: 'flex', flexDirection: 'column', gap: '2rem'}}>
+                <h4>Tech<span>Skills</span></h4>
                 <ButtonsSection>
                     {data?.techSkills.map((category, i) => <SkillButton key={i} data={category} click={clicked => updateSelect(clicked)}/>)}
                 </ButtonsSection>
-                <ContentSection>
-                    <SkillsData select={selected}/>
-                </ContentSection>
-            </ContainerContent>
+            </div>
+            <ContentSection>
+                <SkillsData select={selected}/>
+            </ContentSection>
+            {/* <ContainerContent>
+            </ContainerContent> */}
         </ContainerTech>
     )
 }

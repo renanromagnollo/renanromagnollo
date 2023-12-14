@@ -13,16 +13,29 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 
+p, h5 {
+    color: ${({theme}) => theme.colors.light.dark};
+    margin: 2vh;
+    /* font-size: 1rem; */
+}
+
+> div {
+
+}
+
 `
 
 export function SkillsData({select} : SkillsDataProps){
     return(
         <SectionSkills>
            {select ? (
-                        <h4>{select?.title}</h4>
+                        <div>
+                            <h5>{select?.title}</h5>
+                            <p>{select?.text?.text}</p>
+                        </div>
                     ) :
                 (<div>
-                    <h6>Since beginning my journey as a web developer nearly 11 years ago, I've create digital products for business. I'm always improving my products by knowledge.</h6>
+                    <h5>Since beginning my journey as a web developer nearly 11 years ago, I've create digital products for business. I'm always improving my products by knowledge.</h5>
                     <div>
                             <SkillsPercents/>
                     </div>
