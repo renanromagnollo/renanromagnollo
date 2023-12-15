@@ -4,6 +4,20 @@
 			{
 				"slug": "renan-romagnollo",
 				"title": "renanromagnollo.com",
+				"subtitle": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Um review do meu próprio website. "
+									}
+								]
+							}
+						]
+					}
+				},
 				"img": [
 					{
 						"url": "https://media.graphassets.com/ZEyqlX6ZQY6wpRCAXO89"
@@ -126,7 +140,7 @@
 		]
 	},
 	"extensions": {
-		"Complexity-Cost-Left": 999999990,
+		"Complexity-Cost-Left": 999999989,
 		"Effective-Complexity-Limit": 1000000000
 	}
 }

@@ -52,6 +52,7 @@ const CardContainer = styled.div<CardContainerProps>`
                 color: ${({theme}) => theme.colors.light.default};
             }
         }
+        
 
         span {
             color: ${({theme}) => theme.colors.primary.default};
@@ -78,16 +79,16 @@ export function CardProject({project} : CardProjectProps){
                         
                     />
                 
-                <div>
-                    <h5>{project ? project.title : 'Título'}</h5>
-                    {!project ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
-                        : <div><RichText content={project?.text?.raw}/></div>
-                    }
-                    <div>Tecnologies...</div>
-                    <span>Saiba mais</span>
+                    <div>
+                        <h5>{project ? project.title : 'Título'}</h5>
+                        {!project ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
+                            : <div><RichText content={project?.subtitle?.raw}/></div>
+                        }
+                        <div>Tecnologies...</div>
+                        <span>Saiba mais</span>
 
-                </div>
-            </CardContainer>
+                    </div>
+                </CardContainer>
         </Link>
 
     )
