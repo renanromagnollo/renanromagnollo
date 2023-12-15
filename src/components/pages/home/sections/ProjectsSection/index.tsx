@@ -34,7 +34,8 @@ export function Projects({data} : ProjectsProps){
             <CardsContainer>
                 {data?.projects?.map((project, i) => {
                     console.log('project Title: ', project.title)
-                    return <CardProject key={i} title={project.title} img={project.img[0].url}/>
+                    console.log('project text: ', project.text)
+                    return <CardProject key={i} title={project.title} text={project.text} img={project.img[0].url}/>
                 
                 })}
                 {/* <CardProject title='Título' text='Text...'/>

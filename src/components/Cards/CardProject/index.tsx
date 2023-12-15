@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { lighten } from 'polished';
 import  Image  from 'next/image';
 import Link from "next/link";
+import { RichText } from "@/components/RichText";
+// import { RichText } from "@graphcms/rich-text-react-renderer";
 
 interface CardContentProps {
     title?: string
@@ -56,6 +58,7 @@ const CardContainer = styled.div<CardContainerProps>`
 
 
 export function CardProject({title='Título', text='texto...', img} : CardContentProps){
+    console.log('TEXT: ', text)
     return(
             <Link href={`/projects/${title}`}>
                 <CardContainer>
@@ -74,7 +77,7 @@ export function CardProject({title='Título', text='texto...', img} : CardConten
                 <div>
                     <h5>{title}</h5>
                     {text ==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
-                        : text
+                        : <p><RichText content={text?.raw}/></p>
                     }
                     <div>Tecnologies...</div>
                     <span>Saiba mais</span>

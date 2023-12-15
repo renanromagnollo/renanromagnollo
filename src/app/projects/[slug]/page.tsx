@@ -1,8 +1,13 @@
+import { RichTextContent } from '@graphcms/rich-text-react-renderer'
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
+import { RichText } from '@/components/RichText'
 
 interface ProjectProps {
     params: {
         slug: string
+        text: {
+          raw: RichTextContent
+        } 
     }
 }
 
@@ -33,9 +38,12 @@ const getProjectData = async () => {
 
 export default async function Project({params}: ProjectProps) {
     // const response = await getProjectData()
-
+  console.log('Project page: ', params?.text?.raw)
     // console.log('Response Hygraph ProjectQuery: ', response)
     return (
-        <h1>Project: {params.slug}</h1>        
+        <div>
+          <h1>Project: {params.slug}</h1>
+          <p><RichText content={params?.text?.raw}/></p>
+        </div>
     )
 }
