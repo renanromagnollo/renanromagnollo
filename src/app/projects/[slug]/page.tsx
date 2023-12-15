@@ -3,19 +3,20 @@ import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { RichText } from '@/components/RichText'
 
 interface ProjectProps {
-    params: {
-        slug: string
-        text: {
-          raw: RichTextContent
-        } 
-    }
+  slug: string
+  params: {
+    slug: string
+  }
+  text: {
+    raw: RichTextContent
+  } 
 }
 
-const getProjectData = async () => {
+const getProjectData = async (slug: string) => {
   try {
     const query = `
     query ProjectInfoQuery {
-        project(where: {slug: "meuwebsite"}) {
+        project(where: {slug: ${slug}}) {
           img
           technologies {
             iconSvg
@@ -36,8 +37,8 @@ const getProjectData = async () => {
 
 }
 
-export default async function Project({params}: ProjectProps) {
-    // const response = await getProjectData()
+export default async function Project({params, slug}: ProjectProps) {
+    // const response = await getProjectData(slug)
   console.log('Project page: ', params?.text?.raw)
     // console.log('Response Hygraph ProjectQuery: ', response)
     return (

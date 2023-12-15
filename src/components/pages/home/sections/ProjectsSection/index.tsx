@@ -33,9 +33,11 @@ export function Projects({data} : ProjectsProps){
             <TitleSection title="Alguns Projetos" subtitle="Projetos de desenvolvimento de aplicações..." path="/projects"/>
             <CardsContainer>
                 {data?.projects?.map((project, i) => {
-                    console.log('project Title: ', project.title)
-                    console.log('project text: ', project.text)
-                    return <CardProject key={i} title={project.title} text={project.text} img={project.img[0].url}/>
+                    console.log('ProjectsSection - project: ', project)
+                    // console.log('project Title: ', project.title)
+                    // console.log('project text: ', project.text)
+                    // return <CardProject key={i} title={project.title} text={project.text} img={project.img[0].url}/>
+                    return <CardProject key={i} project={project}/>
                 
                 })}
                 {/* <CardProject title='Título' text='Text...'/>

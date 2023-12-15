@@ -4,12 +4,18 @@ import { lighten } from 'polished';
 import  Image  from 'next/image';
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
+import { RichTextContent } from "@graphcms/rich-text-types";
 // import { RichText } from "@graphcms/rich-text-react-renderer";
-
-interface CardContentProps {
-    title?: string
-    text?: string
-    img?: string    
+interface ProjectProps {
+    slug: string
+    title: string
+    text: {
+        raw: RichTextContent
+    }
+    img?: string  
+}
+interface CardProjectProps {
+    project: ProjectProps
 }
 
 interface CardContainerProps {
@@ -55,15 +61,13 @@ const CardContainer = styled.div<CardContainerProps>`
  
 `
 
-
-
-export function CardProject({title='Título', text='texto...', img} : CardContentProps){
-    console.log('TEXT: ', text)
+export function CardProject({project} : CardProjectProps){
+    // console.log('TEXT: ', text)
     return(
-            <Link href={`/projects/${title}`}>
+            <Link href={`/projects/${project.slug}`}>
                 <CardContainer>
                     <Image
-                        src={img}
+                        src={project.img[0].url}
                         width={0}
                         height={0}
                         alt="Image"
@@ -75,9 +79,9 @@ export function CardProject({title='Título', text='texto...', img} : CardConten
                     />
                 
                 <div>
-                    <h5>{title}</h5>
-                    {text ==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
-                        : <div><RichText content={text?.raw}/></div>
+                    <h5>{project ? project.title : 'Título'}</h5>
+                    {!project ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
+                        : <div><RichText content={project?.text?.raw}/></div>
                     }
                     <div>Tecnologies...</div>
                     <span>Saiba mais</span>
