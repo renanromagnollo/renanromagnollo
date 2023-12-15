@@ -77,7 +77,7 @@ export function CardProject({title='Título', text='texto...', img} : CardConten
                 <div>
                     <h5>{title}</h5>
                     {text ==='texto' ? <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eum est placeat possimus voluptas voluptatem minima labore, cupiditate officiis quasi.</p>
-                        : <p><RichText content={text?.raw}/></p>
+                        : <div><RichText content={text?.raw}/></div>
                     }
                     <div>Tecnologies...</div>
                     <span>Saiba mais</span>
