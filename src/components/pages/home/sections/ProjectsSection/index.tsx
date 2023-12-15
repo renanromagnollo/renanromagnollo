@@ -27,7 +27,7 @@ const CardsContainer = styled.div`
 `
 export function Projects({data} : ProjectsProps){
 
-    console.log('data Projects: ', data?.projects)
+    // console.log('data Projects: ', data?.projects)
     return(
         <ProjectsContainer>
             <TitleSection title="Alguns Projetos" subtitle="Projetos de desenvolvimento de aplicações..." path="/projects"/>

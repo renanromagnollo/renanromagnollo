@@ -62,12 +62,12 @@ const CardContainer = styled.div<CardContainerProps>`
 `
 
 export function CardProject({project} : CardProjectProps){
-    // console.log('TEXT: ', text)
+    console.log('CardProject {project}: ', project)
     return(
-            <Link href={`/projects/${project.slug}`}>
+            <Link href={`/projects/${project?.slug}`}>
                 <CardContainer>
                     <Image
-                        src={project.img[0].url}
+                        src={project?.img[0]?.url}
                         width={0}
                         height={0}
                         alt="Image"

@@ -4,6 +4,7 @@ const techskills = require('./techskills.json')
 const socials = require('./socials.json')
 const blog = require('./blog.json')
 const projects = require('./projects.json')
+const project = require('./project.json')
 
 
 module.exports = () => ({
@@ -12,5 +13,6 @@ module.exports = () => ({
     techskills,
     socials,
     blog,
-    projects
+    projects,
+    project
 })

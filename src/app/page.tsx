@@ -68,7 +68,7 @@ export default function Home() {
     
   }, [])
 
-  useEffect(() => console.log('techsKills state: ', techskills), [techskills])
+  // useEffect(() => console.log('techsKills state: ', techskills), [techskills])
 
 
   return (
