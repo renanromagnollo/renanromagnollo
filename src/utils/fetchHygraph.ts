@@ -1,6 +1,6 @@
 
 
-export const fetchHygraphQuery = async (query: string) => {
+export const fetchHygraphQuery = async (query: string, revalidate=60*60*24) => {
     try {
         const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_URL!, {
             method: 'POST',
@@ -13,7 +13,7 @@ export const fetchHygraphQuery = async (query: string) => {
                 Authorization: `Bearer ${process.env.NEXT_PUBLIC_HIGRAPH_TOKEN}`,
             },
             next: {
-                revalidate: 60 * 60 * 24 // 24h
+                revalidate // 24h
                 // revalidate: 5,
             },
             
