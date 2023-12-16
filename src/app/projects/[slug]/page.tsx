@@ -2,15 +2,16 @@ import { RichTextContent } from '@graphcms/rich-text-react-renderer'
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { RichText } from '@/components/RichText'
 import { getFakeData } from '@/utils/fakeServer'
+import { ProjectProps } from '@/types/project-types'
 
-interface ProjectProps {
-  params: {
-    slug: string
-  }
-  text: {
-    raw: RichTextContent
-  } 
-}
+// interface ProjectProps {
+//   params: {
+//     slug: string
+//   }
+//   text: {
+//     raw: RichTextContent
+//   } 
+// }
 
 const getProjectData = async (slug: string) => {
   try {

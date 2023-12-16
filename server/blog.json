@@ -372,11 +372,178 @@
 				"image": {
 					"url": "https://media.graphassets.com/2Z65R0KZTPy7xYhoKeYe"
 				}
+			},
+			{
+				"slug": "5-linguagens-mais-usadas",
+				"title": "As 5 Linguagens de Programação Mais Utilizadas Atualmente",
+				"subtitle": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "As linguagens de programação são a espinha dorsal da tecnologia moderna, permitindo aos desenvolvedores criar desde simples aplicativos até sistemas complexos. No entanto, com tantas opções disponíveis, é essencial destacar as cinco linguagens mais populares e suas especialidades únicas que as tornam tão prevalentes no cenário atual da programação."
+									}
+								]
+							}
+						]
+					}
+				},
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "1. JavaScript"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Especialidade:"
+									},
+									{
+										"text": " Front-end e Back-end Web"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "JavaScript é, sem dúvida, uma das linguagens mais dominantes no mundo da programação. É a linguagem principal para o desenvolvimento web, sendo fundamental para a criação de interfaces interativas e dinâmicas. Do front-end ao back-end, frameworks como React, Angular e Node.js impulsionam a utilização massiva do JavaScript."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "2. Python"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Especialidade:"
+									},
+									{
+										"text": " Versatilidade e Simplicidade"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Python ganhou popularidade devido à sua sintaxe legível e versatilidade. É utilizada em uma ampla gama de domínios, desde desenvolvimento web até inteligência artificial e ciência de dados. Sua facilidade de aprendizado e vasta comunidade contribuem para seu sucesso contínuo."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "3. Java"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Especialidade:"
+									},
+									{
+										"text": " Aplicações Empresariais e Android"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Java é uma linguagem amplamente adotada em empresas para desenvolvimento de aplicações corporativas e sistemas de grande escala. Além disso, é a linguagem oficial para o desenvolvimento Android, o que a torna crucial para aplicativos móveis em dispositivos Android."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "4. C#"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Especialidade:"
+									},
+									{
+										"text": " Desenvolvimento de Jogos e Aplicações Windows"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Desenvolvida pela Microsoft, C# é altamente utilizada no desenvolvimento de jogos, especialmente com a popularidade do Unity Game Engine. Além disso, é a linguagem primária para aplicativos Windows, o que a torna essencial para muitos desenvolvedores de software."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "5. C/C++"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"bold": true,
+										"text": "Especialidade:"
+									},
+									{
+										"text": " Sistemas Operacionais e Software de Baixo Nível"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "C e C++ são linguagens de baixo nível utilizadas no desenvolvimento de sistemas operacionais, softwares embarcados e aplicações que exigem desempenho otimizado. Sua eficiência e controle direto sobre hardware os tornam vitais em áreas que demandam alto desempenho."
+									}
+								]
+							}
+						]
+					}
+				},
+				"image": {
+					"url": "https://media.graphassets.com/f3omlDbRbSIopEs5TMbY"
+				}
 			}
 		]
 	},
 	"extensions": {
-		"Complexity-Cost-Left": 999999985,
+		"Complexity-Cost-Left": 999999981,
 		"Effective-Complexity-Limit": 1000000000
 	}
 }
