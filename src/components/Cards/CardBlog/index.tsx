@@ -1,3 +1,4 @@
+'use client'
 import styled from "styled-components"
 import Image from "next/image"
 import { ReactNode } from "react"
@@ -24,7 +25,7 @@ const CardBlogBox = styled.div`
     transition: border-color 1s;
     
     &:hover {
-        border-color: ${({theme}) => theme.colors.secundary.default};
+        border-color: ${({theme}) => theme.colors.primary.default};
         box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .4);
     }
 
