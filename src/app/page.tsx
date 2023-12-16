@@ -11,8 +11,9 @@ import { Projects } from "@/components/pages/home/sections/ProjectsSection"
 import { BlogSection } from "@/components/pages/home/sections/BlogSection"
 import { TechSection } from "@/components/pages/home/sections/TechSections"
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { getFakeData } from "@/utils/fakeServer"
+import DataProvider, { DataContext } from "./context/data-context"
 
 const ContainerHome = styled.div`
   display: flex;
@@ -44,10 +45,13 @@ const getHeroData = async () => {
 
 export default function Home() {
   
+  const {projects, blog, setProjects, setBlog} = useContext(DataContext)
+  
   const [hero, setHero] = useState(null)
   const [techskills, setTechskills] = useState(null)
-  const [projects, setProjects] = useState(null)
-  const [blog, setBlog] = useState(null)
+  // const [projects, setProjects] = useState(null)
+  // const [blog, setBlog] = useState(null)
+
 
   
   useEffect(() => {
@@ -72,7 +76,7 @@ export default function Home() {
 
 
   return (
-        <ContainerHome>
+    <ContainerHome>
           <GlobalStyle />
           {/* <HeroSection text={hero?.hero?.text?.text}/> */}
           <HeroSection text={hero?.hero?.text?.text} />
@@ -81,6 +85,7 @@ export default function Home() {
           <BlogSection data={blog}/>
           <Link href="/articles">Articles</Link>
         </ContainerHome>
+
 
 
   )

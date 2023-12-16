@@ -18,7 +18,7 @@ const data: dataProps = {
     setBlog: () => {} 
 }
 
-export const AppContext = createContext<dataProps>(data)
+export const DataContext = createContext<dataProps>(data)
 
 function DataProvider({children}: {children: ReactNode}) {
     
@@ -32,12 +32,14 @@ function DataProvider({children}: {children: ReactNode}) {
     }
 
     return (
-        <AppContext.Provider value={{
+        <DataContext.Provider value={{
             projects: state.projects,
             blog: state.blog,
             setProjects: projects => updateState('projects', projects),
             setBlog: blog => updateState('blog', blog)
-        }}/>
+        }}>{children}</DataContext.Provider>
     )
 
 }
+
+export default DataProvider
