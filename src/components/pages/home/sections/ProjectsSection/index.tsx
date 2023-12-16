@@ -6,7 +6,7 @@ interface ProjectsProps {
     data: any
 }
 
-const ProjectsContainer = styled.section`
+const ProjectsContainer = styled.div`
     width: 100vw;
     padding: 8vh 0;
     background-color: ${({theme}) => theme.colors.dark.light};
@@ -27,12 +27,12 @@ const CardsContainer = styled.div`
 `
 export function Projects({data} : ProjectsProps){
 
-    // console.log('data Projects: ', data?.projects)
+    console.log('data Projects: ', data)
     return(
         <ProjectsContainer>
             <TitleSection title="Alguns Projetos" subtitle="Projetos de desenvolvimento de aplicações..." path="/projects"/>
             <CardsContainer>
-                {data?.projects?.map((project, i) => {
+                {data?.map((project, i) => {
                     console.log('ProjectsSection - project: ', project)
                     // console.log('project Title: ', project.title)
                     // console.log('project text: ', project.text)

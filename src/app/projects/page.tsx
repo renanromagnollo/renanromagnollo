@@ -6,7 +6,7 @@ import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 import {useRouter} from "next/navigation"
 import { useContext } from "react"
-import { DataContext } from "../context/data-context"
+import { DataContext } from "../../components/context/data-context"
 
 interface ProjectsProps {
 
@@ -46,7 +46,7 @@ export default function Projects(props : ProjectsProps){
             <PathComponent/>
             <TitleSection title="Projetos" subtitle="Alguns projetos profissionais e de estudo"></TitleSection>
             <div>
-                {projects?.map(project => <CardProject key={project.params.slug} project={project}/>)}
+                {projects?.map(project => <CardProject key={project.slug} project={project}/>)}
             </div>
         </ContainerProjects>
     )

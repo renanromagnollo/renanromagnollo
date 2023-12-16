@@ -1,3 +1,5 @@
+'use client'
+
 import { BlogProps } from "@/types/blog-types";
 import { ProjectProps } from "@/types/project-types";
 import { ReactNode, createContext, useEffect, useState } from "react";
