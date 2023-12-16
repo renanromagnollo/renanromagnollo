@@ -2,23 +2,31 @@ import styled from "styled-components"
 import Image from "next/image"
 import { ReactNode } from "react"
 
-interface CardTitleProps {
+interface CardBlogProps {
     title?: string
     img?: string
     // children: ReactNode
 }
 
-const CardTitleBox = styled.div`
+const CardBlogBox = styled.div`
     cursor: pointer;
     position: relative;
     min-width: 310px;
     max-width: 15vw;
     height: 360px;
     /* background-color: rgba(0, 0, 0, 0.8); */
-    border: solid 4px;
-    border-color: ${({theme}) => theme.colors.dark.dark};
+    border: solid 4px black;
+    border-color: ${({theme}) => theme.colors.light.dark};
     overflow: hidden;
     /* opacity: .5; */
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, .4);
+    
+    transition: border-color 1s;
+    
+    &:hover {
+        border-color: ${({theme}) => theme.colors.secundary.default};
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .4);
+    }
 
     > img {
         z-index: -20px;
@@ -32,6 +40,7 @@ const CardTitleBox = styled.div`
 
 const ContentCard = styled.div`
     position: absolute;
+    padding: 5px;
     /* z-index: 50px; */
     /* width: 90%; */
     bottom: 0;
@@ -76,10 +85,10 @@ const ContentCard = styled.div`
     }
     `
 
-export function CardTitle({title, img='http://picsum.photos/200/600'} : CardTitleProps){
+export function CardBlog({title, img='http://picsum.photos/200/600'} : CardBlogProps){
     let tit = !title ? 'Lorem ipsum dolor sit amet.' : title
     return(
-        <CardTitleBox>
+        <CardBlogBox>
             <Image
                 src={img}
                 width={0}
@@ -95,6 +104,6 @@ export function CardTitle({title, img='http://picsum.photos/200/600'} : CardTitl
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. fdjakfçjdakçfjakfç jdklç fjdklaç fjdkçf jda</p>
 
             </ContentCard>
-        </CardTitleBox>
+        </CardBlogBox>
     )
 }

@@ -1,5 +1,5 @@
 // import { CardContent } from "@/components/Cards/CardContent"
-import { CardTitle } from "@/components/Cards/CardTitle"
+import { CardBlog } from "@/components/Cards/CardBlog"
 import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 
@@ -33,7 +33,7 @@ export function BlogSection({data} : BlogSectionProps){
             <CadsArea>
                 {data?.blogs?.map((post, i) => {
                         // console.log('BLOG: ', post?.image?.url)
-                        return <CardTitle key={i} title={post.title} img={post?.image?.url}/>})
+                        return <CardBlog key={i} title={post.title} img={post?.image?.url}/>})
                     }
                 {/* <CardTitle/>
                 <CardTitle/>
