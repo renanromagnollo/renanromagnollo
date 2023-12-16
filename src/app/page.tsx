@@ -45,7 +45,7 @@ const getHeroData = async () => {
 
 export default function Home() {
   
-  const {projects, blog, setProjects, setBlog} = useContext(DataContext)
+  const {projects, blog, updateAll} = useContext(DataContext)
   
   const [hero, setHero] = useState(null)
   const [techskills, setTechskills] = useState(null)
@@ -58,13 +58,14 @@ export default function Home() {
     const allQueries = async () => {
       // const hero = await getHeroData()
       const hero = await getFakeData('hero')
-      if(hero) setHero(hero)
       const techskills = await getFakeData('techskills')
-      if(techskills) setTechskills(techskills)
       const projects = await getFakeData('projects')
-      if(projects) setProjects(projects)
       const blog = await getFakeData('blog')
-      if(blog) setBlog(blog)
+      if(hero) setHero(hero)
+      if(techskills) setTechskills(techskills)
+      updateAll(projects, blog)
+      // if(projects) setProjects(projects)
+      // if(blog) setBlog(blog)
   
     }
     allQueries()

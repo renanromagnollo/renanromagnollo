@@ -5,6 +5,8 @@ import { PathComponent } from "@/components/Path"
 import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 import {useRouter} from "next/navigation"
+import { useContext } from "react"
+import { DataContext } from "../context/data-context"
 
 interface ProjectsProps {
 
@@ -34,6 +36,9 @@ const ContainerProjects = styled.section`
 
 `
 export default function Projects(props : ProjectsProps){
+
+    const {projects} = useContext(DataContext)
+    console.log('CONTEXT projects :', projects)
     // const params = useRouter()
     // console.log('params: ', params)
     return(
@@ -41,13 +46,7 @@ export default function Projects(props : ProjectsProps){
             <PathComponent/>
             <TitleSection title="Projetos" subtitle="Alguns projetos profissionais e de estudo"></TitleSection>
             <div>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
+                {projects?.map(project => <CardProject key={project.params.slug} project={project}/>)}
             </div>
         </ContainerProjects>
     )
