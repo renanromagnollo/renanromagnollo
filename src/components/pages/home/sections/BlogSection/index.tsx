@@ -1,6 +1,8 @@
 // import { CardContent } from "@/components/Cards/CardContent"
 import { CardBlog } from "@/components/Cards/CardBlog"
 import { TitleSection } from "@/components/TitleSection"
+import { DataContext } from "@/context/data-context"
+import { useContext } from "react"
 import styled from "styled-components"
 
 interface BlogSectionProps {
@@ -27,17 +29,17 @@ const CadsArea = styled.div`
 `
 
 export function BlogSection({data} : BlogSectionProps){
+    
+    const {blog} = useContext(DataContext)
     return(
         <ContainerBlogSection>
             <TitleSection title="Blog"/>
             <CadsArea>
-                {data?.blogs?.map((post, i) => {
+                {blog?.map((post, i) => {
                         // console.log('BLOG: ', post?.image?.url)
-                        return <CardBlog key={i} title={post.title} img={post?.image?.url}/>})
-                    }
-                {/* <CardTitle/>
-                <CardTitle/>
-                <CardTitle/> */}
+                        return <CardBlog key={i} post={post}/>
+                    })}
+                
             </CadsArea>
         </ContainerBlogSection>
     )

@@ -2,7 +2,7 @@
 	"data": {
 		"posts": [
 			{
-				"slug": null,
+				"slug": "decolando-com-react",
 				"title": "Decolando com ReactJS e NextJS: O Poder da Dupla Imbatível no Desenvolvimento Web",
 				"subtitle": {
 					"raw": {
@@ -130,7 +130,7 @@
 				}
 			},
 			{
-				"slug": null,
+				"slug": "o-poder-do-prototipo",
 				"title": " O Poder Transformador do Protótipo",
 				"subtitle": {
 					"raw": {
@@ -259,7 +259,7 @@
 				"image": null
 			},
 			{
-				"slug": null,
+				"slug": "o-segredo-para-performance",
 				"title": "Next.js: O Segredo Profissional para Performance Avançada",
 				"subtitle": {
 					"raw": {

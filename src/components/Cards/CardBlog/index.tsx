@@ -108,7 +108,7 @@ export function CardBlog({post}: {post: CardBlogProps}) {
     console.log('CardBlog props: ', post)
     // let tit = !title ? 'Lorem ipsum dolor sit amet.' : title
     return(
-        <Link href={`/blog/`}>
+        <Link href={`/blog/${post?.slug}`}>
             <CardBlogBox>
                 <Image
                     src={post?.image?.url}
