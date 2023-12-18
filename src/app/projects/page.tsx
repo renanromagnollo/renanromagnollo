@@ -6,7 +6,7 @@ import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 import {useRouter} from "next/navigation"
 import { useContext } from "react"
-import { DataContext } from "../../components/context/data-context"
+import { DataContext } from "../../context/data-context"
 
 interface ProjectsProps {
 

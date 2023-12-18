@@ -1,8 +1,12 @@
 import { BlogProps } from "@/types/blog-types";
+import Link from "next/link";
 
 
-export default function BlogPage({params} : BlogProps){
+export default function BlogPage(props : BlogProps){
     return(
-        <h1>{params.slug}</h1>
+        <Link href={}>
+            <h1>{props.title}</h1>
+        
+        </Link>
     )
 }

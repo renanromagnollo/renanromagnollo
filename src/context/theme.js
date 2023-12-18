@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ThemeProvider } from "styled-components"
-import { dark } from '../../styles/themes/dark'
+import { dark } from '../styles/themes/dark'
 
 export const ThemeContextProvider = ({ children }) => {
     const [theme, setTheme] = useState('dark')

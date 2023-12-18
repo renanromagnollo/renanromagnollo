@@ -14,3 +14,18 @@ export interface BlogProps {
     }
     image?: string
 }
+
+export interface CardBlogProps {
+    title: string
+    image: {
+        url: string
+    }
+    slug: string
+    subtitle: {
+        raw: RichTextContent
+    }
+    text: {
+        raw: RichTextContent
+    }
+    
+}

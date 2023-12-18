@@ -3,7 +3,7 @@
 import { Header } from "@/components/Header"
 import dark from "@/styles/themes/dark"
 import { ThemeProvider } from "styled-components"
-import DataProvider from "../components/context/data-context"
+import DataProvider from "../context/data-context"
 
 export default function Template({children}: {
     children: React.ReactNode
@@ -12,8 +12,10 @@ export default function Template({children}: {
         <div>
             {/* <DataProvider> */}
                 <ThemeProvider theme={dark}>
-                    <Header/>
-                    {children}
+                    <DataProvider>
+                        <Header/>
+                        {children}
+                    </DataProvider>
                 </ThemeProvider>
             {/* </DataProvider> */}
         </div>

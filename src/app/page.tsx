@@ -13,7 +13,7 @@ import { TechSection } from "@/components/pages/home/sections/TechSections"
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { useContext, useEffect, useState } from "react"
 import { getFakeData } from "@/utils/fakeServer"
-import DataProvider, { DataContext } from "../components/context/data-context"
+import DataProvider, { DataContext } from "../context/data-context"
 
 const ContainerHome = styled.div`
   display: flex;
@@ -63,7 +63,7 @@ export default function Home() {
       const blog = await getFakeData('blog')
       if(hero) setHero(hero)
       if(techskills) setTechskills(techskills)
-      updateAll(projects, blog)
+      updateAll(projects, blog.posts)
       // if(projects) setProjects(projects)
       // if(blog) setBlog(blog)
   

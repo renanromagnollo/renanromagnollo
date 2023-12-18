@@ -2,12 +2,29 @@
 import styled from "styled-components"
 import Image from "next/image"
 import { ReactNode } from "react"
+import Link from "next/link"
+import { RichTextContent } from '@graphcms/rich-text-react-renderer';
+import { BlogProps, CardBlogProps } from "@/types/blog-types"
 
-interface CardBlogProps {
-    title?: string
-    img?: string
-    // children: ReactNode
-}
+// interface CardBlogProps {
+//     slug: string
+//     title: string
+//     subtitle?:{
+//         raw: RichTextContent
+//     }
+//     text?:{
+//         raw: RichTextContent
+//     }
+//     img?: {
+//         url: string
+//     } 
+//     // children: ReactNode
+// }
+
+// interface CardBlogProps {
+//     post: BlogProps
+// }
+
 
 const CardBlogBox = styled.div`
     cursor: pointer;
@@ -86,25 +103,30 @@ const ContentCard = styled.div`
     }
     `
 
-export function CardBlog({title, img='http://picsum.photos/200/600'} : CardBlogProps){
-    let tit = !title ? 'Lorem ipsum dolor sit amet.' : title
-    return(
-        <CardBlogBox>
-            <Image
-                src={img}
-                width={0}
-                height={0}
-                // fill
-                alt="Image"
-                loading="lazy"
-                sizes="100%"
-                style={{width: '100%', height:'100%', objectFit: 'cover'}}
-            />
-            <ContentCard>
-                <h5>{tit}</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. fdjakfçjdakçfjakfç jdklç fjdklaç fjdkçf jda</p>
+export function CardBlog({post}: {post: CardBlogProps}) {
 
-            </ContentCard>
-        </CardBlogBox>
+    console.log('CardBlog props: ', post)
+    // let tit = !title ? 'Lorem ipsum dolor sit amet.' : title
+    return(
+        <Link href={`/blog/`}>
+            <CardBlogBox>
+                <Image
+                    src={post?.image?.url}
+                    width={0}
+                    height={0}
+                    // fill
+                    alt="Image"
+                    loading="lazy"
+                    sizes="100%"
+                    style={{width: '100%', height:'100%', objectFit: 'cover'}}
+                />
+                <ContentCard>
+                    <h5>{post?.title}</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. fdjakfçjdakçfjakfç jdklç fjdklaç fjdkçf jda</p>
+
+                </ContentCard>
+            </CardBlogBox>
+        
+        </Link>
     )
 }
