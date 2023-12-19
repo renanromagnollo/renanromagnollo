@@ -14,6 +14,7 @@ import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { useContext, useEffect, useState } from "react"
 import { getFakeData } from "@/utils/fakeServer"
 import DataProvider, { DataContext } from "../context/data-context"
+import { InstaFeed } from "@/components/InstaFeed"
 
 const ContainerHome = styled.div`
   display: flex;
@@ -85,6 +86,7 @@ export default function Home() {
           <TechSection data={techskills}/>
           <Projects data={projects}/>
           <BlogSection data={blog}/>
+          <InstaFeed/>
           <Link href="/articles">Articles</Link>
         </ContainerHome>
 
