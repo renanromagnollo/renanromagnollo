@@ -5,6 +5,7 @@ import { ReactNode } from "react"
 import Link from "next/link"
 import { RichTextContent } from '@graphcms/rich-text-react-renderer';
 import { BlogProps, CardBlogProps } from "@/types/blog-types"
+import { RichText } from "@/components/RichText"
 
 // interface CardBlogProps {
 //     slug: string
@@ -73,29 +74,35 @@ const ContentCard = styled.div`
     transform: all ease-in .3s;
 
     
-    > h5 {
+    > h4 {
         /* z-index: 60px; */
         /* position: absolute; */
-        background-color: rgba(0, 0, 0, 0.3);
+        font-family: ${({theme}) => theme.fonts.h5};
+        font-size: 1.3rem;
+        /* background-color: rgba(0, 0, 0, 0.3); */
         width: 100%;
         /* height: 100%; */
         /* z-index: 30px; */
         /* bottom: 0; */
         /* right: 0; */
-        padding: 15px;
+        /* padding: 15px; */
         text-align: right;
         color: ${({theme}) => theme.colors.primary.default};
         opacity: 0.9;
+        margin: 0;
+        padding-top: 10px;
     }
     
     &:hover {
-        > p {
+        > span {
             height: 100%;
             padding: 10px;
         }
     }
     
-    > p {
+    > span {
+        font-family: ${({theme}) => theme.fonts.small};
+        color: ${({theme}) => theme.colors.light.default};
         height: 0;
         /* padding: 10px; */
         text-align: end;
@@ -121,8 +128,8 @@ export function CardBlog({post}: {post: CardBlogProps}) {
                     style={{width: '100%', height:'100%', objectFit: 'cover'}}
                 />
                 <ContentCard>
-                    <h5>{post?.title}</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. fdjakfçjdakçfjakfç jdklç fjdklaç fjdkçf jda</p>
+                    <h4>{post?.title}</h4>
+                    <span><RichText content={post?.subtitle?.raw}/></span>
 
                 </ContentCard>
             </CardBlogBox>

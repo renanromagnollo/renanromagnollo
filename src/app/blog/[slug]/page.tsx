@@ -1,5 +1,5 @@
 
-// "use client"
+"use client"
 
 import { DataContext } from "@/context/data-context";
 import { BlogProps } from "@/types/blog-types";
