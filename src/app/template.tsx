@@ -12,10 +12,10 @@ export default function Template({children}: {
         <div>
             {/* <DataProvider> */}
                 {/* <ThemeProvider theme={dark}> */}
-                    {/* <DataProvider> */}
+                    <DataProvider>
                         <Header/>
                         {children}
-                    {/* </DataProvider> */}
+                    </DataProvider>
                 {/* </ThemeProvider> */}
             {/* </DataProvider> */}
         </div>

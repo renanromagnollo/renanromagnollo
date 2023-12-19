@@ -68,8 +68,8 @@ const ContentCard = styled.div`
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-evenly;
+    align-items: flex-start;
     opacity: .9;
     transform: all ease-in .3s;
 
@@ -126,6 +126,7 @@ export function CardBlog({post}: {post: CardBlogProps}) {
                     loading="lazy"
                     sizes="100%"
                     style={{width: '100%', height:'100%', objectFit: 'cover'}}
+                    unoptimized
                 />
                 <ContentCard>
                     <h3>{post?.title}</h3>

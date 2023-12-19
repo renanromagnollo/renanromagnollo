@@ -60,12 +60,13 @@ export default function Home() {
       const hero = await getFakeData('hero')
       const techskills = await getFakeData('techskills')
       const {projects} = await getFakeData('projects')
-      const blog = await getFakeData('blog')
+      const {blogs} = await getFakeData('blog')
       if(hero) setHero(hero)
       if(techskills) setTechskills(techskills)
-      updateAll(projects, blog.posts)
+      updateAll(projects, blogs)
       // if(projects) setProjects(projects)
       // if(blog) setBlog(blog)
+      console.log('blogs query: ', blogs)
   
     }
     allQueries()

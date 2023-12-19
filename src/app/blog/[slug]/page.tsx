@@ -6,28 +6,47 @@ import { BlogProps } from "@/types/blog-types";
 import { getFakeData } from "@/utils/fakeServer";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 
 
-export default async function BlogPage({params}){
+export default function BlogPage({params}){
+    
+    const [postSelected, setPostSelected] = useState('')
+
+    // const {blogs} = await getFakeData('blog')
+    // console.log('data BlogPage: ', blogs)
+    // const selected = blogs?.filter(post => post.slug === params.slug)
+    // console.log('SELECTED: ', selected)
+    // if(selected) setPostSelected(selected)
+    // const [postSelected, setPostSelected] = useState('')
+
+    useEffect(() => {
+        const getBlog = async () => {
+            const {blogs} = await getFakeData('blog')
+            console.log('data BlogPage: ', blogs)
+            const selected = blogs?.filter(post => post.slug === params.slug)
+            console.log('SELECTED: ', selected)
+            if(selected) setPostSelected(selected[0])
+        }
+
+        getBlog()
+
+    }, [])
 
 
-    const {posts} = await getFakeData('blog')
-    console.log('data BlogPage: ', posts)
-    const selected = posts?.filter(post => post.slug === params.slug)
     // console.log('PROJECTs: ', data.projects)
 
-    console.log('SELECTED: ', selected)
-    const post = selected[0]
+    // const post = selected
     
 
-    return(
-        <div>
-            <h1>{post?.title}</h1>
-            <h2>{post?.title}</h2>
-            <p><RichText content={post?.text?.raw}/></p>
-        </div>
+    return postSelected &&
+            (<div>
+                <h1>{postSelected?.title}</h1>
+                <div><RichText content={postSelected?.subtitle?.raw}/></div>
+                <div><RichText content={postSelected?.text?.raw}/></div>
+            </div>)
         
-    )
-}
+    
+    } 

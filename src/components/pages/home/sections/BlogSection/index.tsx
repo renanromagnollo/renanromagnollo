@@ -22,8 +22,10 @@ const ContainerBlogSection = styled.section`
 
 const CadsArea = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     /* background-color: blue; */
 `
@@ -31,6 +33,8 @@ const CadsArea = styled.div`
 export function BlogSection({data} : BlogSectionProps){
     
     const {blog} = useContext(DataContext)
+
+    // console.log('BlogSection blog: ', blog)
     return(
         <ContainerBlogSection>
             <TitleSection title="Blog"/>

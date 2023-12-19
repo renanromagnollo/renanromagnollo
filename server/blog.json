@@ -1,8 +1,8 @@
 {
 	"data": {
-		"posts": [
+		"blogs": [
 			{
-				"slug": "decolando-com-react",
+				"slug": "decolando-com-reactjs",
 				"title": "Decolando com ReactJS e NextJS: O Poder da Dupla Imbatível no Desenvolvimento Web",
 				"subtitle": {
 					"raw": {
@@ -256,10 +256,12 @@
 						]
 					}
 				},
-				"image": null
+				"image": {
+					"url": "https://media.graphassets.com/WottiSIQ42WHn0D9JHTl"
+				}
 			},
 			{
-				"slug": "o-segredo-para-performance",
+				"slug": "nextjs-performance-avancada",
 				"title": "Next.js: O Segredo Profissional para Performance Avançada",
 				"subtitle": {
 					"raw": {
@@ -539,11 +541,260 @@
 				"image": {
 					"url": "https://media.graphassets.com/f3omlDbRbSIopEs5TMbY"
 				}
+			},
+			{
+				"slug": "windows-linux-mac",
+				"title": "Windows, Linux e macOS: Qual é o sistema operacional ideal para você?",
+				"subtitle": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Se você está em dúvida sobre qual sistema operacional escolher para seu dispositivo, é hora de dar uma olhada nas características marcantes do Windows, Linux e macOS. "
+									}
+								]
+							}
+						]
+					}
+				},
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cada um tem seu próprio estilo e conjunto de recursos que podem fazer a diferença na sua experiência digital. Vamos às diferenças:"
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"bold": true,
+										"text": "Windows: A Facilidade e Versatilidade"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Interface intuitiva e familiar, ideal para iniciantes e usuários convencionais."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Vasta gama de softwares e jogos compatíveis, especialmente voltados para usuários cotidianos."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Fácil integração com a maioria dos hardwares e dispositivos periféricos."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Sistema operacional mais popular no mercado de computadores pessoais."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"bold": true,
+										"text": "Linux: Flexibilidade e Controle"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Sistema de código aberto, oferecendo ampla personalização e controle total sobre o sistema."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Estabilidade e segurança altamente reconhecidas, com menor suscetibilidade a vírus e malware."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Ideal para programadores, desenvolvedores e entusiastas de tecnologia."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Grande diversidade de distribuições (distros) adaptáveis a diferentes necessidades."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"bold": true,
+										"text": "macOS (Mac): Design e Integração"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Sistema operacional exclusivo para dispositivos Apple, conhecido pelo seu design elegante e intuitivo."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Integração perfeita com outros dispositivos da Apple, como iPhone, iPad e Apple Watch."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Popular entre profissionais criativos devido à estabilidade e eficiência no fluxo de trabalho."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Hardware e software otimizados para trabalhar em conjunto, oferecendo uma experiência integrada."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cada um desses sistemas tem seus próprios méritos e é direcionado a diferentes tipos de usuários. A escolha do sistema operacional ideal depende das suas necessidades pessoais, do tipo de atividades que você realiza no computador e das preferências de interface."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Na hora de escolher entre Windows, Linux e macOS, considere suas prioridades: facilidade de uso, personalização, compatibilidade com software específico ou integração com outros dispositivos. Em última análise, a decisão é sua e o importante é encontrar aquele que se encaixa perfeitamente no seu estilo de uso."
+									}
+								]
+							}
+						]
+					}
+				},
+				"image": {
+					"url": "https://media.graphassets.com/huARJfWS5CmEtKacsdQV"
+				}
 			}
 		]
 	},
 	"extensions": {
-		"Complexity-Cost-Left": 999999981,
+		"Complexity-Cost-Left": 999999976,
 		"Effective-Complexity-Limit": 1000000000
 	}
 }

@@ -4,7 +4,7 @@ import { PathComponent } from "@/components/Path"
 import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
 import {useRouter} from "next/navigation"
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import { DataContext } from "../../context/data-context"
 import { BlogPageCards } from "@/components/pages/blog/BlogPageCards"
 import { BlogProps } from "@/types/blog-types"
@@ -36,29 +36,52 @@ const ContainerBlog = styled.section`
 
 `
 export default function Blog(){
-
-    const {blog, setBlog} = useContext(DataContext)
-
+    const [data, setData] = useState(null)
+    // const {blogs} =  await getFakeData('blog')
+    // console.log('blogData: ', blogs)
+    
     useEffect(() => {
-        const dataBlog = async () => {
-            const posts = await getFakeData('blog')
-            if(posts) setBlog(posts)
+        const getData = async () => {
+            const {blogs} =  await getFakeData('blog')
+            if(blogs) {
+                console.log('blogData: ', blogs)
+                setData(blogs)}   
         }
-        dataBlog()
+        getData()
     }, [])
+
+    // const {blog} = useContext(DataContext)
+
+    // if(!blog) {
+    //     try {
+    //         getData()
+    //     } catch (error) {
+    //         console.log(error)
+    //     } 
+    // } else {
+    //     setData(blog)
+    // }
+
+    // useEffect(() => {
+    //     const dataBlog = async () => {
+    //         const posts = await getFakeData('blog')
+    //         if(posts) setBlog(posts)
+    //     }
+    //     dataBlog()
+    // }, [])
 
     // const {blog} = useContext(DataContext)
     // console.log('CONTEXT blog :', blog)
     // const params = useRouter()
     // console.log('params: ', params)
-    return(
-        <ContainerBlog>
+    return data &&
+        (<ContainerBlog>
             <PathComponent/>
             <TitleSection title="Blog" subtitle="Alguns posts"></TitleSection>
-            <BlogPageCards />
+            <BlogPageCards blog={data}/>
             {/* <div>
                 {blog?.map(post => <CardBlog key={post.slug} post={post}/>)}
             </div> */}
-        </ContainerBlog>
-    )
+        </ContainerBlog>)
+    
 }
