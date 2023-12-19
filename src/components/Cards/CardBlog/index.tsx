@@ -74,11 +74,11 @@ const ContentCard = styled.div`
     transform: all ease-in .3s;
 
     
-    > h4 {
+    > h3 {
         /* z-index: 60px; */
         /* position: absolute; */
         font-family: ${({theme}) => theme.fonts.h5};
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
         /* background-color: rgba(0, 0, 0, 0.3); */
         width: 100%;
         /* height: 100%; */
@@ -128,7 +128,7 @@ export function CardBlog({post}: {post: CardBlogProps}) {
                     style={{width: '100%', height:'100%', objectFit: 'cover'}}
                 />
                 <ContentCard>
-                    <h4>{post?.title}</h4>
+                    <h3>{post?.title}</h3>
                     <span><RichText content={post?.subtitle?.raw}/></span>
 
                 </ContentCard>

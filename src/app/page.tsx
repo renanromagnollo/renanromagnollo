@@ -3,7 +3,7 @@
 import Link from "next/link"
 
 import GlobalStyle from '../styles/global'
-import styled, { ThemeProvider } from "styled-components"
+import styled from "styled-components"
 import dark from "@/styles/themes/dark"
 import light from "@/styles/themes/light"
 import { HeroSection } from "@/components/pages/home/sections/HeroSection"
@@ -78,7 +78,7 @@ export default function Home() {
 
   return (
     <ContainerHome>
-          <GlobalStyle />
+          {/* <GlobalStyle /> */}
           {/* <HeroSection text={hero?.hero?.text?.text}/> */}
           <HeroSection text={hero?.hero?.text?.text} />
           <TechSection data={techskills}/>
