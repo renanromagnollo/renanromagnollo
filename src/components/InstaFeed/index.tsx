@@ -17,7 +17,7 @@ const ContainerInstagram = styled.div`
 
 const ContainerPosts = styled.section`
     width: 90%;
-    height: 370px;
+    height: 190px;
     overflow: hidden;
     padding: 30px 0;
     display: flex;
@@ -31,11 +31,11 @@ const ContainerPosts = styled.section`
 const CardInsta = styled.div`
     width: 150px;
     height: 150px;
-
+    cursor: pointer;
     /* margin: 40px; */
     border-radius: 8px;
     overflow: hidden;
-    border: 4px solid ${({theme}) => theme.colors.light.default};
+    border: 4px solid ${({theme}) => theme.colors.light.dark};
 
     &:hover{
         border-color: ${({theme}) => theme.colors.terciary.light};
@@ -124,6 +124,8 @@ export function InstaFeed(props : InstaFeedProps){
                 }
                 
             </ContainerPosts>
+            <h5><Link href={'https//:'}>@renanromagnollo</Link></h5>
+
         </ContainerInstagram>
     )
 }

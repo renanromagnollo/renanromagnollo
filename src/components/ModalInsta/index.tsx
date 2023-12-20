@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import Image from "next/image"
+import { useEffect } from "react"
 
 interface ModalInstaProps {
     isOpen: boolean
@@ -35,6 +36,14 @@ const ContainerModal = styled.div`
     }
 `
 export function ModalInsta({isOpen, imgUrl, closeModal} : ModalInstaProps){
+    
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            closeModal(false)
+            return
+        })
+    }, [])
+
     return(isOpen &&
         <ContainerModal onClick={() => closeModal(false)}>
             <div>
