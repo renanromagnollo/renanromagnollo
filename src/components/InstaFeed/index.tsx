@@ -124,7 +124,7 @@ export function InstaFeed(props : InstaFeedProps){
                 }
                 
             </ContainerPosts>
-            <h5><Link href={'https//:'}>@renanromagnollo</Link></h5>
+            <h5><Link href={'https://www.instagram.com/renanromagnollo/'} target="_blank">@renanromagnollo</Link></h5>
 
         </ContainerInstagram>
     )

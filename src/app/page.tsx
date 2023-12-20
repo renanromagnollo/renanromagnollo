@@ -87,7 +87,7 @@ export default function Home() {
           <Projects data={projects}/>
           <BlogSection data={blog}/>
           <InstaFeed/>
-          <Link href="/articles">Articles</Link>
+          {/* <Link href="/articles">Articles</Link> */}
         </ContainerHome>
 
 
