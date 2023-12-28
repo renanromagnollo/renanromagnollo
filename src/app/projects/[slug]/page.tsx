@@ -1,28 +1,26 @@
+// 'use client'
+
 import { RichTextContent } from '@graphcms/rich-text-react-renderer'
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { RichText } from '@/components/RichText'
 import { getFakeData } from '@/utils/fakeServer'
-import { ProjectProps } from '@/types/project-types'
+import { ProjectPageProps, ProjectProps } from '@/types/project-types'
+import Image from 'next/image'
+import Link from 'next/link'
+import { PathComponent } from '@/components/Path'
 
-// interface ProjectProps {
-//   params: {
-//     slug: string
-//   }
-//   text: {
-//     raw: RichTextContent
-//   } 
-// }
+
 
 const getProjectData = async (slug: string) => {
   try {
     const query = `
     query ProjectInfoQuery {
         project(where: {slug: ${slug}}) {
+          slug
           img
           technologies {
             iconSvg
             name
-            startDate
           }
           text {
             raw
@@ -30,29 +28,40 @@ const getProjectData = async (slug: string) => {
         }
       }
     `
-      return fetchHygraphQuery( query )
+    return fetchHygraphQuery(query)
   } catch (error) {
     console.error(error)
   }
-    
 
 }
-// criar json fake d
-//pegar data através do slug
-export default async function Project({params}: ProjectProps) {
-  console.log('Project page rendered!')
-    // const response = await getProjectData(slug)
+
+export default async function ProjectPage({ params }: ProjectPageProps) {
+
   const data = await getFakeData('projects')
-  const selected = data.projects.filter(project => project.slug === params.slug)
-  console.log('PROJECTs: ', data.projects)
-  console.log('SELECTED: ', selected)
-  // const selected = data.filter(project => (project.slug === params.slug))
-  // console.log('SELECTED Project: ', selected)
-    // console.log('Response Hygraph ProjectQuery: ', response)
-    return (
-        <div>
-          <h1>Project: {selected[0]?.title}</h1>
-          <p><RichText content={selected[0]?.text?.raw}/></p>
-        </div>
-    )
+  const selectProject = data.projects.filter(project => project.slug === params.slug)
+  console.log('PARAMS: ', params)
+  const project: ProjectProps = selectProject[0]
+  return project && (
+    <div>
+      <PathComponent path={params.slug} />
+      <Image
+        src={project?.img[0]?.url}
+        width={0}
+        height={0}
+        alt='Project_Image'
+        loading='lazy'
+        unoptimized
+        sizes='100%'
+        style={{ width: '100%', height: '20vh', objectFit: 'cover', opacity: '.4' }}
+      // fill={true}
+      />
+      <h1>{project?.title}</h1>
+      <h2><RichText content={project?.subtitle?.raw} /></h2>
+      <Link href={project?.githubLink}>GitHub</Link>
+      <p><RichText content={project?.text?.raw} /></p>
+      <ul>
+        {/* {project?.technologies.map((tech, i) => <li key={i}>{tech.name}</li>)} */}
+      </ul>
+    </div>
+  )
 }
