@@ -4,18 +4,25 @@ import { CardProject } from "@/components/Cards/CardProject"
 import { PathComponent } from "@/components/Path"
 import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
-import {useRouter} from "next/navigation"
-import { useContext } from "react"
+import { useRouter } from "next/navigation"
+import { useContext, useEffect } from "react"
 import { DataContext } from "../../context/data-context"
+import { CardProjectPage } from "@/components/pages/projects/CardProjectPage"
+import { getFakeData } from "@/utils/fakeServer"
+import { SectionCards } from "@/components/pages/projects/SectionCards"
 
 interface ProjectsProps {
 
 }
 
-const ContainerProjects = styled.section`
+interface ContainerProjects {
+    'data-testid': string
+}
+
+const ContainerProjects = styled.section<ContainerProjects>`
     margin: 0;
     padding: 50px 0;
-    background-color: ${({theme}) => theme.colors.dark.dark};
+    background-color: ${({ theme }) => theme?.colors?.dark?.dark};
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,19 +42,39 @@ const ContainerProjects = styled.section`
     }
 
 `
-export default function Projects(props : ProjectsProps){
+export default function Projects(props: ProjectsProps) {
 
-    const {projects} = useContext(DataContext)
-    console.log('CONTEXT projects :', projects)
-    // const params = useRouter()
-    // console.log('params: ', params)
-    return(
-        <ContainerProjects>
-            <PathComponent/>
+    const { projects, setProjects } = useContext(DataContext)
+    // const data = await getFakeData('projects')
+
+    console.log('ProjectsPage rendered!')
+    console.log('Context PROJECTS: ', projects)
+
+    useEffect(() => {
+        async function upFakeData() {
+            const fakeData = async () => await getFakeData('projects')
+            const data = await fakeData()
+            console.log('fakeDAta PROJECTS: ', data.projects)
+            setProjects(data.projects)
+        }
+        if (projects.length <= 0) upFakeData()
+    }, [])
+
+    useEffect(() => {
+        console.log('PROJECTS Context changed! ', projects)
+    }, [projects])
+
+    return (
+        <ContainerProjects data-testid="projects-page">
+            <PathComponent />
             <TitleSection title="Projetos" subtitle="Alguns projetos profissionais e de estudo"></TitleSection>
-            <div>
-                {projects?.map(project => <CardProject key={project.slug} project={project}/>)}
-            </div>
+            {/* <SectionCards data={projects} /> */}
+            {<div>
+
+                {projects?.map((project, i) => <CardProjectPage key={i} data={project} />)}
+
+            </div>}
+
         </ContainerProjects>
     )
 }

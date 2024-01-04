@@ -3,7 +3,7 @@ import { CardBlog } from "@/components/Cards/CardBlog"
 import { PathComponent } from "@/components/Path"
 import { TitleSection } from "@/components/TitleSection"
 import styled from "styled-components"
-import {useRouter} from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useContext, useEffect, useState } from "react"
 import { DataContext } from "../../context/data-context"
 import { BlogPageCards } from "@/components/pages/blog/BlogPageCards"
@@ -15,7 +15,7 @@ import { getFakeData } from "@/utils/fakeServer"
 const ContainerBlog = styled.section`
     margin: 0;
     padding: 50px 0;
-    background-color: ${({theme}) => theme.colors.dark.dark};
+    background-color: ${({ theme }) => theme.colors.dark.dark};
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,17 +35,18 @@ const ContainerBlog = styled.section`
     }
 
 `
-export default function Blog(){
+export default function Blog() {
     const [data, setData] = useState(null)
     // const {blogs} =  await getFakeData('blog')
     // console.log('blogData: ', blogs)
-    
+
     useEffect(() => {
         const getData = async () => {
-            const {blogs} =  await getFakeData('blog')
-            if(blogs) {
+            const { blogs } = await getFakeData('blog')
+            if (blogs) {
                 console.log('blogData: ', blogs)
-                setData(blogs)}   
+                setData(blogs)
+            }
         }
         getData()
     }, [])
@@ -76,12 +77,12 @@ export default function Blog(){
     // console.log('params: ', params)
     return data &&
         (<ContainerBlog>
-            <PathComponent/>
+            <PathComponent />
             <TitleSection title="Blog" subtitle="Alguns posts"></TitleSection>
-            <BlogPageCards blog={data}/>
+            <BlogPageCards blog={data} />
             {/* <div>
                 {blog?.map(post => <CardBlog key={post.slug} post={post}/>)}
             </div> */}
         </ContainerBlog>)
-    
+
 }

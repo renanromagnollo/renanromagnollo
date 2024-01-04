@@ -23,18 +23,18 @@ export const ContainerTag = styled.div`
         }
 
         h5 {
-            color: ${({theme}) =>  theme.colors.primary.default}
+            color: ${({ theme }) => theme?.colors?.primary?.default}
         }
 
         h1 {
-            color: ${({theme}) => theme.colors.light.dark}
+            color: ${({ theme }) => theme?.colors?.light?.dark}
         }
 
     `
-export function TitleSection({title='Section Title', subtitle=`lorem`, path}: TitleSectionProps){
+export function TitleSection({ title = 'Section Title', subtitle = `lorem`, path }: TitleSectionProps) {
     let sub = subtitle === 'lorem' ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' : subtitle
-    
-    return(
+
+    return (
         <ContainerTag>
             <div>
                 {path ? (<Link href={path}><h5>{path}</h5></Link>) : ''}
