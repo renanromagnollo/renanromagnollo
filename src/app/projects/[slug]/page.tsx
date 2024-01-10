@@ -43,7 +43,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const project: ProjectProps = selectProject[0]
   return project && (
     <div>
-      <PathComponent path={params.slug} />
       <Image
         src={project?.img[0]?.url}
         width={0}

@@ -54,7 +54,6 @@ export default function Blog() {
 
     return data &&
         (<ContainerBlog>
-            <PathComponent />
             <TitleSection title="Blog" subtitle="Alguns posts"></TitleSection>
             <BlogPageCards blog={data} />
             {/* <div>

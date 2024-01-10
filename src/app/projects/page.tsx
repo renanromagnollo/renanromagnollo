@@ -66,7 +66,6 @@ export default function Projects(props: ProjectsProps) {
 
     return (
         <ContainerProjects data-testid="projects-page">
-            <PathComponent />
             <TitleSection title="Projetos" subtitle="Alguns projetos profissionais e de estudo"></TitleSection>
             {/* <SectionCards data={projects} /> */}
             {<div>
