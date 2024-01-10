@@ -25,7 +25,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           <DataProvider>
             {children}
           </DataProvider>
-          <ContactForm />
 
         </Providers>
         {/* </ThemeProvider> */}

@@ -15,6 +15,7 @@ import { useContext, useEffect, useState } from "react"
 import { getFakeData } from "@/utils/fakeServer"
 import DataProvider, { DataContext } from "../context/data-context"
 import { InstaFeed } from "@/components/InstaFeed"
+import { ContactForm } from "@/components/ContactForm"
 
 const ContainerHome = styled.div`
   display: flex;
@@ -45,34 +46,34 @@ const getHeroData = async () => {
 }
 
 export default function Home() {
-  
-  const {projects, blog, updateAll} = useContext(DataContext)
-  
+
+  const { projects, blog, updateAll } = useContext(DataContext)
+
   const [hero, setHero] = useState(null)
   const [techskills, setTechskills] = useState(null)
   // const [projects, setProjects] = useState(null)
   // const [blog, setBlog] = useState(null)
 
 
-  
+
   useEffect(() => {
     const allQueries = async () => {
       // const hero = await getHeroData()
       const hero = await getFakeData('hero')
       const techskills = await getFakeData('techskills')
-      const {projects} = await getFakeData('projects')
-      const {blogs} = await getFakeData('blog')
-      if(hero) setHero(hero)
-      if(techskills) setTechskills(techskills)
+      const { projects } = await getFakeData('projects')
+      const { blogs } = await getFakeData('blog')
+      if (hero) setHero(hero)
+      if (techskills) setTechskills(techskills)
       updateAll(projects, blogs)
       // if(projects) setProjects(projects)
       // if(blog) setBlog(blog)
       console.log('blogs query: ', blogs)
-  
+
     }
     allQueries()
     return console.log('allQueries done!')
-    
+
   }, [])
 
   // useEffect(() => console.log('techsKills state: ', techskills), [techskills])
@@ -80,15 +81,17 @@ export default function Home() {
 
   return (
     <ContainerHome>
-          {/* <GlobalStyle /> */}
-          {/* <HeroSection text={hero?.hero?.text?.text}/> */}
-          <HeroSection text={hero?.hero?.text?.text} />
-          <TechSection data={techskills}/>
-          <Projects data={projects}/>
-          <BlogSection data={blog}/>
-          <InstaFeed/>
-          {/* <Link href="/articles">Articles</Link> */}
-        </ContainerHome>
+      {/* <GlobalStyle /> */}
+      {/* <HeroSection text={hero?.hero?.text?.text}/> */}
+      <HeroSection text={hero?.hero?.text?.text} />
+      <TechSection data={techskills} />
+      <Projects data={projects} />
+      <BlogSection data={blog} />
+      <InstaFeed />
+      <ContactForm />
+
+      {/* <Link href="/articles">Articles</Link> */}
+    </ContainerHome>
 
 
 

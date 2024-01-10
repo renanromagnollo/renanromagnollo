@@ -35,7 +35,7 @@ const CardBlogBox = styled.div`
     height: 360px;
     /* background-color: rgba(0, 0, 0, 0.8); */
     border: solid 4px black;
-    border-color: ${({theme}) => theme.colors.light.dark};
+    border-color: ${({ theme }) => theme.colors.light.dark};
     overflow: hidden;
     /* opacity: .5; */
     box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, .4);
@@ -43,7 +43,7 @@ const CardBlogBox = styled.div`
     transition: border-color 1s;
     
     &:hover {
-        border-color: ${({theme}) => theme.colors.primary.default};
+        border-color: ${({ theme }) => theme.colors.primary.default};
         box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .4);
     }
 
@@ -65,7 +65,7 @@ const ContentCard = styled.div`
     bottom: 0;
     /* justify-self: flex-end; */
     /* height: 50%; */
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, .9);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -77,7 +77,7 @@ const ContentCard = styled.div`
     > h3 {
         /* z-index: 60px; */
         /* position: absolute; */
-        font-family: ${({theme}) => theme.fonts.h5};
+        font-family: ${({ theme }) => theme.fonts.h5};
         /* font-size: 1.3rem; */
         /* background-color: rgba(0, 0, 0, 0.3); */
         width: 100%;
@@ -87,13 +87,14 @@ const ContentCard = styled.div`
         /* right: 0; */
         /* padding: 15px; */
         text-align: right;
-        color: ${({theme}) => theme.colors.primary.default};
+        color: ${({ theme }) => theme.colors.primary.default};
         opacity: 0.9;
         margin: 0;
         padding-top: 10px;
     }
     
     &:hover {
+        background-color: rgba(0, 0, 0, 1);
         > span {
             height: 100%;
             padding: 10px;
@@ -101,8 +102,8 @@ const ContentCard = styled.div`
     }
     
     > span {
-        font-family: ${({theme}) => theme.fonts.small};
-        color: ${({theme}) => theme.colors.light.default};
+        font-family: ${({ theme }) => theme.fonts.small};
+        color: ${({ theme }) => theme.colors.light.default};
         height: 0;
         /* padding: 10px; */
         text-align: end;
@@ -110,11 +111,11 @@ const ContentCard = styled.div`
     }
     `
 
-export function CardBlog({post}: {post: CardBlogProps}) {
+export function CardBlog({ post }: { post: CardBlogProps }) {
 
     console.log('CardBlog props: ', post)
     // let tit = !title ? 'Lorem ipsum dolor sit amet.' : title
-    return(
+    return (
         <Link href={`/blog/${post?.slug}`}>
             <CardBlogBox>
                 <Image
@@ -125,16 +126,16 @@ export function CardBlog({post}: {post: CardBlogProps}) {
                     alt="Image"
                     loading="lazy"
                     sizes="100%"
-                    style={{width: '100%', height:'100%', objectFit: 'cover'}}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     unoptimized
                 />
                 <ContentCard>
                     <h3>{post?.title}</h3>
-                    <span><RichText content={post?.subtitle?.raw}/></span>
+                    <span><RichText content={post?.subtitle?.raw} /></span>
 
                 </ContentCard>
             </CardBlogBox>
-        
+
         </Link>
     )
 }

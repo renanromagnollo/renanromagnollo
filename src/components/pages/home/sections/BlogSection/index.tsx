@@ -16,34 +16,34 @@ const ContainerBlogSection = styled.section`
     justify-content: space-evenly;
     align-items: center;
     gap: 8vh;
-    /* background-color: pink; */
-    padding: 20px 0;
+    background-color: ${({ theme }) => theme.colors.dark.default};
+    padding: 50px 0;
 `
 
 const CadsArea = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    /* flex-wrap: wrap; */
+    gap: 70px;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     /* background-color: blue; */
 `
 
-export function BlogSection({data} : BlogSectionProps){
-    
-    const {blog} = useContext(DataContext)
+export function BlogSection({ data }: BlogSectionProps) {
+
+    const { blog } = useContext(DataContext)
 
     // console.log('BlogSection blog: ', blog)
-    return(
+    return (
         <ContainerBlogSection>
-            <TitleSection title="Blog"/>
+            <TitleSection title="Informativo" subtitle="Algumas informações e curiosidades desse universo tecnológico" path="/blog" />
             <CadsArea>
                 {blog?.map((post, i) => {
-                        // console.log('BLOG: ', post?.image?.url)
-                        return <CardBlog key={i} post={post}/>
-                    })}
-                
+                    // console.log('BLOG: ', post?.image?.url)
+                    return <CardBlog key={i} post={post} />
+                })}
+
             </CadsArea>
         </ContainerBlogSection>
     )
