@@ -51,30 +51,7 @@ export default function Blog() {
         getData()
     }, [])
 
-    // const {blog} = useContext(DataContext)
 
-    // if(!blog) {
-    //     try {
-    //         getData()
-    //     } catch (error) {
-    //         console.log(error)
-    //     } 
-    // } else {
-    //     setData(blog)
-    // }
-
-    // useEffect(() => {
-    //     const dataBlog = async () => {
-    //         const posts = await getFakeData('blog')
-    //         if(posts) setBlog(posts)
-    //     }
-    //     dataBlog()
-    // }, [])
-
-    // const {blog} = useContext(DataContext)
-    // console.log('CONTEXT blog :', blog)
-    // const params = useRouter()
-    // console.log('params: ', params)
     return data &&
         (<ContainerBlog>
             <PathComponent />

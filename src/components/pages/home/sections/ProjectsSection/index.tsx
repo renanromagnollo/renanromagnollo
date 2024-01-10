@@ -15,9 +15,8 @@ const ProjectsContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     /* gap: 20vh; */
-    
-    `
 
+`
 const CardsContainer = styled.div`
     width: 100%;
     display: flex;
@@ -34,15 +33,9 @@ export function Projects({ data }: ProjectsProps) {
             <CardsContainer>
                 {data?.map((project, i) => {
                     console.log('ProjectsSection - project: ', project)
-                    // console.log('project Title: ', project.title)
-                    // console.log('project text: ', project.text)
-                    // return <FolderCardProject key={i} title={project.title} text={project.text} img={project.img[0].url}/>
                     return <FolderCardProject key={i} project={project} />
 
                 })}
-                {/* <FolderCardProject title='Título' text='Text...'/>
-                <FolderCardProject title='Título' text='Text...'/>
-                <FolderCardProject title='Título' text='Text...'/> */}
             </CardsContainer>
         </ProjectsContainer>
     )
