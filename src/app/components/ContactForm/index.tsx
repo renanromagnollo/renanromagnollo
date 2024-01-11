@@ -1,4 +1,3 @@
-'use client'
 
 import { useForm } from "react-hook-form";
 import { z } from 'zod'
@@ -23,14 +22,49 @@ const contactFormSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactFormSchema>
 
-const containerContactTag = styled.div`
+const ContainerContactTag = styled.div`
     width: 100%;
+    /* margin: 50px 0; */
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: ${({ theme }) => theme.colors.dark.light};
+    
+    > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 10px 0;
+        
+        input {
+            height: 40px;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+        
+        textarea {
+            width: 300px;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input, textarea {
+            background-color: ${({ theme }) => theme.colors.dark.dark};
+            color: ${({ theme }) => theme.colors.light.dark};
+            border: none;
+        }
+    }
+    
 `
+
+
+
 export function ContactForm() {
 
     const { handleSubmit, register } = useForm<ContactFormData>({
@@ -42,7 +76,7 @@ export function ContactForm() {
     }
 
     return (
-        <containerContactTag id="contact">
+        <ContainerContactTag id="contact">
 
             <h1>Contato</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -53,6 +87,7 @@ export function ContactForm() {
                     {...register('name')}
                 />
                 <input
+                    style={{ width: '300px' }}
                     placeholder="E-mail"
                     type="email"
                     {...register('email')}
@@ -68,6 +103,6 @@ export function ContactForm() {
             </form>
 
 
-        </containerContactTag>
+        </ContainerContactTag>
     )
 }
