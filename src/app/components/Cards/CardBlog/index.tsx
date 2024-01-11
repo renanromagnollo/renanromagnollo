@@ -5,7 +5,7 @@ import { ReactNode } from "react"
 import Link from "next/link"
 import { RichTextContent } from '@graphcms/rich-text-react-renderer';
 import { BlogProps, CardBlogProps } from "@/types/blog-types"
-import { RichText } from "@/components/RichText"
+import { RichText } from "../../RichText"
 
 // interface CardBlogProps {
 //     slug: string

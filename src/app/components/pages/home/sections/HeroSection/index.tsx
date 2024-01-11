@@ -1,5 +1,5 @@
-import { ButtonTag } from "@/components/Button";
-import {AiOutlineArrowDown} from 'react-icons/ai'
+import { ButtonTag } from "@/app/components/Button";
+import { AiOutlineArrowDown } from 'react-icons/ai'
 import styled from "styled-components";
 
 import { Freehand, Nothing_You_Could_Do } from 'next/font/google'
@@ -31,7 +31,7 @@ const SectionTag = styled.section`
 
         > div {
             p {
-                color: ${({theme}) =>  theme.colors.light.dark};
+                color: ${({ theme }) => theme.colors.light.dark};
                 height: 14vh;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -55,7 +55,7 @@ const SectionTag = styled.section`
     }
 
     span {
-        color: ${({theme}) => theme.colors.primary.default}
+        color: ${({ theme }) => theme.colors.primary.default}
     }
 `
 
@@ -70,7 +70,7 @@ interface HeroSectionProps {
 
 
 
-export function HeroSection({title, subtitle, text} : HeroSectionProps){
+export function HeroSection({ title, subtitle, text }: HeroSectionProps) {
 
 
     // console.log('responseData: ', responseData)
@@ -79,29 +79,29 @@ export function HeroSection({title, subtitle, text} : HeroSectionProps){
     const handleContact = () => {
         const contactSection = document.querySelector('#contact')
         if (contactSection) {
-            contactSection.scrollIntoView({behavior: 'smooth'})
+            contactSection.scrollIntoView({ behavior: 'smooth' })
         }
     }
 
-    return(
+    return (
         <SectionTag>
             <div className="container">
                 <div>
                     {/* <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5> */}
-                    {title || <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5>}
+                    {title || <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{ fontSize: '4rem' }}>Renan Romagnollo</span></h5>}
                     <h4>I'm a <span>Front-End Developer</span></h4>
-                    <p style={{width: '40vw'}}>{text}</p>
+                    <p style={{ width: '40vw' }}>{text}</p>
                     <div>
                         techs
                     </div>
                     <div>
                         <ButtonTag>
                             Leia mais...
-                            <AiOutlineArrowDown size={25}/>
+                            <AiOutlineArrowDown size={25} />
                         </ButtonTag>
                     </div>
                 </div>
-                    <CardProfile/>
+                <CardProfile />
                 {/* <div style={{width: '250px', height: '300px', backgroundColor: 'darkgray'}}>
                 </div> */}
             </div>

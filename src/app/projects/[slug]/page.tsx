@@ -2,7 +2,7 @@
 
 import { RichTextContent } from '@graphcms/rich-text-react-renderer'
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
-import { RichText } from '@/components/RichText'
+import { RichText } from '@/app/components/RichText'
 import { getFakeData } from '@/utils/fakeServer'
 import { ProjectPageProps, ProjectProps } from '@/types/project-types'
 import Image from 'next/image'

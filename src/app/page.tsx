@@ -6,16 +6,16 @@ import GlobalStyle from '../styles/global'
 import styled from "styled-components"
 import dark from "@/styles/themes/dark"
 import light from "@/styles/themes/light"
-import { HeroSection } from "@/components/pages/home/sections/HeroSection"
-import { Projects } from "@/components/pages/home/sections/ProjectsSection"
-import { BlogSection } from "@/components/pages/home/sections/BlogSection"
-import { TechSection } from "@/components/pages/home/sections/TechSections"
+import { HeroSection } from "./components/pages/home/sections/HeroSection"
+import { Projects } from "./components/pages/home/sections/ProjectsSection"
+import { BlogSection } from "./components/pages/home/sections/BlogSection"
+import { TechSection } from "./components/pages/home/sections/TechSections"
 import { fetchHygraphQuery } from "@/utils/fetchHygraph"
 import { useContext, useEffect, useState } from "react"
 import { getFakeData } from "@/utils/fakeServer"
 import DataProvider, { DataContext } from "../context/data-context"
-import { InstaFeed } from "@/components/InstaFeed"
-import { ContactForm } from "@/components/ContactForm"
+import { InstaFeed } from "./components/InstaFeed"
+import { ContactForm } from "./components/ContactForm"
 
 const ContainerHome = styled.div`
   display: flex;

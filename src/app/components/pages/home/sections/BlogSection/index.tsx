@@ -1,6 +1,6 @@
 // import { CardContent } from "@/components/Cards/CardContent"
-import { CardBlog } from "@/components/Cards/CardBlog"
-import { TitleSection } from "@/components/TitleSection"
+import { CardBlog } from "../../../../Cards/CardBlog"
+import { TitleSection } from "../../../../TitleSection"
 import { DataContext } from "@/context/data-context"
 import { useContext } from "react"
 import styled from "styled-components"

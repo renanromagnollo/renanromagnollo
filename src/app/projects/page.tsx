@@ -2,12 +2,12 @@
 
 import { CardProject } from "@/components/Cards/CardProject"
 import { PathComponent } from "@/components/Path"
-import { TitleSection } from "@/components/TitleSection"
+import { TitleSection } from "@/app/components/TitleSection"
 import styled from "styled-components"
 import { useRouter } from "next/navigation"
 import { useContext, useEffect } from "react"
 import { DataContext } from "../../context/data-context"
-import { CardProjectPage } from "@/components/pages/projects/CardProjectPage"
+import { CardProjectPage } from "@/app/components/pages/projects/CardProjectPage"
 import { getFakeData } from "@/utils/fakeServer"
 import { SectionCards } from "@/components/pages/projects/SectionCards"
 

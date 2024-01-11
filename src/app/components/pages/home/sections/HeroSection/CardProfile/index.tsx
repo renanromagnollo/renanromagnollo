@@ -1,12 +1,13 @@
 import Image from "next/image"
 import styled from "styled-components"
 import { light } from '@/styles/themes/light';
-import { ReactIcon } from "@/components/icons/reactIcon";
-import { PhotoshopIcon } from "@/components/icons/photoshopIcon";
-import { FigmaIcon } from "@/components/icons/figmaIcon";
-import { JavascriptIcon } from "@/components/icons/javascriptIcon";
+// import { ReactIcon } from "@/components/icons/reactIcon";
+import { PhotoshopIcon } from "@/app/components/icons/photoshopIcon";
+import { FigmaIcon } from "@/app/components/icons/figmaIcon";
+import { JavascriptIcon } from "@/app/components/icons/javascriptIcon";
 import { BrazilIcon } from "@/components/icons/brazilIcon";
 import { ChipIcon } from "@/components/icons/chipIcon";
+import { ReactIcon } from "@/app/components/icons/reactIcon";
 
 interface CardProfileProps {
 
@@ -16,7 +17,7 @@ const CardBox = styled.div`
     width: 250px;
     height: 400px;
     /* padding: 5vh; */
-    /* background-color: ${({theme}) => theme.colors.dark.light}; */
+    /* background-color: ${({ theme }) => theme.colors.dark.light}; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +37,7 @@ const CardBox = styled.div`
         content: '';
         width: 100%;
         height: 30px;
-        background-color: ${({theme}) => theme.colors.primary.dark};
+        background-color: ${({ theme }) => theme.colors.primary.dark};
         box-shadow: inset 1px 1.5px 5px 1px rgba(0, 0, 0, .7);
         /* text-shadow: inset 1px 1px 1px black; */
         transform: rotate(-45deg);
@@ -48,7 +49,7 @@ const CardBox = styled.div`
         content: '';
         width: 100%;
         height: 10px;
-        background-color: ${({theme}) => theme.colors.light.dark};
+        background-color: ${({ theme }) => theme.colors.light.dark};
         box-shadow: inset 1px 1.5px 2px 1px rgba(0, 0, 0, .6);
         /* text-shadow: inset 1px 1px 1px black; */
         transform: rotate(-45deg);
@@ -77,7 +78,7 @@ const CardBox = styled.div`
     > img {
 
         border-radius: 10px;
-        border: solid 3px ${({theme}) => theme.colors.light.dark};
+        border: solid 3px ${({ theme }) => theme.colors.light.dark};
         filter: saturate(0) grayscale(20%);
         /* box-shadow: inset 5px 2px 2px 1px rgba(0, 0, 0, 0.8); */
         opacity: .8;
@@ -98,7 +99,7 @@ const CardBox = styled.div`
         /* background-color: pink; */
         
         h5, span {
-            color: ${({theme}) => theme.colors.dark.dark};
+            color: ${({ theme }) => theme.colors.dark.dark};
         }
         
 
@@ -113,38 +114,38 @@ const CardBox = styled.div`
 
         span {
             font-size: 1.5rem;
-            /* color: ${({theme}) => theme.colors.dark.dark}; */
+            /* color: ${({ theme }) => theme.colors.dark.dark}; */
         }
     }
 `
 
-export function CardProfile(props : CardProfileProps){
-    return(
+export function CardProfile(props: CardProfileProps) {
+    return (
         <CardBox>
             {/* <ChipIcon/> */}
-            <Image 
+            <Image
                 src={'https://avatars.githubusercontent.com/u/25084493?v=4'}
                 width={0}
                 height={0}
                 sizes="100%"
                 alt="Profile Image"
                 loading="lazy"
-                style={{width: '110px', height:'110px', objectFit: 'contain'}}
+                style={{ width: '110px', height: '110px', objectFit: 'contain' }}
             />
             <div>
                 {/* <BrazilIcon/> */}
                 <div style={{
-                                display: 'flex', 
-                                flexDirection: 'row', 
-                                margin: '10px 0', 
-                                gap: '5px',
-                                opacity: .8
-                                // alignSelf: 'center'
-                            }}>
-                    <PhotoshopIcon size="30px"/>
-                    <FigmaIcon size="30px"/>
-                    <JavascriptIcon size="30px"/>
-                    <ReactIcon size="30px"/>
+                    display: 'flex',
+                    flexDirection: 'row',
+                    margin: '10px 0',
+                    gap: '5px',
+                    opacity: .8
+                    // alignSelf: 'center'
+                }}>
+                    <PhotoshopIcon size="30px" />
+                    <FigmaIcon size="30px" />
+                    <JavascriptIcon size="30px" />
+                    <ReactIcon size="30px" />
                 </div>
                 <h5>R. Romagnollo</h5>
                 <div>
@@ -154,7 +155,7 @@ export function CardProfile(props : CardProfileProps){
                     <span>37 anos</span>
                 </div>
             </div>
-            
+
         </CardBox>
     )
 }

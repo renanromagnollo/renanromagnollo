@@ -1,10 +1,10 @@
 'use client'
 
-import { Header } from "@/components/Header"
+import { Header } from "./components/Header"
 import dark from "@/styles/themes/dark"
 // import { ThemeProvider } from "styled-components"
 import DataProvider from "../context/data-context"
-import { PathComponent } from "@/components/Path"
+import { PathComponent } from "./components/Path"
 
 export default function Template({ children }: {
     children: React.ReactNode

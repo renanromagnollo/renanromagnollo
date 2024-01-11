@@ -1,4 +1,4 @@
-import { RichText } from "@/components/RichText"
+import { RichText } from "@/app/components/RichText"
 import { ProjectProps } from "@/types/project-types"
 import Image from "next/image"
 import Link from "next/link"

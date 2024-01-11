@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { lighten } from 'polished';
 import Image from 'next/image';
 import Link from "next/link";
-import { RichText } from "@/components/RichText";
+import { RichText } from "../../RichText";
 import { RichTextContent } from "@graphcms/rich-text-types";
 // import { RichText } from "@graphcms/rich-text-react-renderer";
 interface ProjectProps {
