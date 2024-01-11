@@ -5,14 +5,15 @@ interface NavItemProps {
     label: string
     href: string
 }
-export function NavItem({label, href}: NavItemProps){
+export function NavItem({ label, href }: NavItemProps) {
     const pathName = usePathname()
 
     const isActive = pathName === href
-    return(
+    return (
         <Link href={href}>
-            <span>#</span>
-            {label}
+            <li className={isActive ? 'active' : ''}>
+                {label}
+            </li>
         </Link>
     )
 }

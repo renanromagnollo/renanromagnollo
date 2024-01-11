@@ -23,7 +23,7 @@ export const HeaderStyle = styled.div`
             align-items: center;
         }
         
-        .links ul {
+        ul {
             /* width: 7.4rem;
             height: 2.1rem;
              */
@@ -42,7 +42,13 @@ export const HeaderStyle = styled.div`
             li {
                 transition: color .2s ease-in;
                 user-select: none;
+                color: ${({ theme }) => theme.colors.light.default};
             }
+            
+            li.active {
+                color: ${({ theme }) => theme.colors.primary.default};
+
+            } 
 
             li:hover {
                 color: #0D99FF;
