@@ -13,7 +13,18 @@ const ContainerInstagram = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    `
+    padding: 50px 0;
+
+    a {
+        background: -webkit-linear-gradient(45deg, #FECA50, #FF8202, #FF356D, #E236A5, #4D35DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h5 {
+        font-size: 3.5rem;
+    }
+`
 
 const ContainerPosts = styled.section`
     width: 90%;
@@ -25,7 +36,6 @@ const ContainerPosts = styled.section`
     justify-content: space-evenly;
     align-items: center;
     gap: 30px;
-    /* background-color: green; */
 `
 
 const CardInsta = styled.div`
@@ -95,7 +105,9 @@ export function InstaFeed(props: InstaFeedProps) {
 
     return (
         <ContainerInstagram>
-            <TitleSection title="instagram" />
+            {/* <TitleSection title="@renanromagnollo" subtitle="Um pouco mais sobre mim..." /> */}
+            <Link href="https://www.instagram.com/renanromagnollo/" target="_blank"><h5>@renanromagnollo</h5></Link>
+            <p>Um pouco mais sobre mim...</p>
             <ModalInsta isOpen={modalInstaOpened} imgUrl={selectedImageUrl} closeModal={close => setModalInstalOpened(close)} />
             <ContainerPosts>
                 {
@@ -124,7 +136,7 @@ export function InstaFeed(props: InstaFeedProps) {
                 }
 
             </ContainerPosts>
-            <h5><Link href={'https://www.instagram.com/renanromagnollo/'} target="_blank">@renanromagnollo</Link></h5>
+            {/* <h5><Link href={'https://www.instagram.com/renanromagnollo/'} target="_blank">@renanromagnollo</Link></h5> */}
 
         </ContainerInstagram>
     )
