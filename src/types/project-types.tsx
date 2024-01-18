@@ -7,6 +7,7 @@ interface TechProps {
 }
 
 export interface ProjectProps {
+    key: any
     slug: string
     title: string
     img: Array<{ url: string }>

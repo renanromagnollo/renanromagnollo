@@ -25,11 +25,11 @@ const BoxCard = styled.section`
   }
 `
 
-export function CardProjectPage({ data }: { data: ProjectProps }) {
+export function CardProjectPage({ data, key }: ProjectProps) {
 
   console.log('data CardProjectPage: ', data)
   return (
-    <BoxCard>
+    <BoxCard key={key}>
       <Image
         src={data.img[0].url || 'https://place-hold.it/650x500'}
         alt="project-image"
