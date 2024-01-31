@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import { Arrow } from '../icons/Arrow'
+import { ReactNode } from 'react'
 
 
 interface ScrollRowsProps {
   scrollX: number
   setX: (x: number) => void
-  componentRef: string
+  componentRef: ReactNode
 }
 
 
@@ -37,21 +38,47 @@ div {
 
 export function ScrollRows({componentRef, scrollX, setX} : ScrollRowsProps){
 
+  // const componentWidth = componentRef?.current?.scrollWidth
+  const componentScrollWidth = componentRef?.current?.scrollWidth
+  const componentOffsetWidth = componentRef?.current?.offsetWidth
+
+  console.log('componentScrollWidth: ', componentScrollWidth)
+  console.log('componentOffsetWidth: ', componentOffsetWidth)
+
+
+  // console.log('componentWidth: ', componentWidth)
+  // console.log('componentRight: ', componentRef?.current?.)
+
   // const componentWidth = componentRef?.current?.style?.width
   // const componentMarginRight = componentRef?.current?.style?.marginRight
   
   const passToLeft = () => {
     if (scrollX < 0) {
-      let calcMarginLeft = scrollX + (window.innerWidth / 3)
+      let calcMarginLeft = scrollX + (window.innerWidth / 2)
       setX(calcMarginLeft >= 0 ? 0 : calcMarginLeft)
     }
   }
 
   const passToRight = () => {
+    console.log('listComponent scrollWidth: ', componentScrollWidth)
+    console.log('listComponent offsetWidth: ', componentOffsetWidth)
+
+    console.log('calc: ', componentOffsetWidth + scrollX)
     // console.log('componentWidth: ', componentWidth)
-    let calcMarginRight = scrollX - (window.innerWidth / 3)
-    setX(calcMarginRight)
-    
+    // let calcToRight = componentOffsetWidth - scrollX
+    //se o tamanho do scroll menos o tamanho da área vista for maior que a metade da janela, 
+    //calcule o scroll menos a metade da janela, se não, coloque o scrollx o resultado da área de scroll menos a área visível
+    if(componentOffsetWidth - scrollX >= window.innerWidth / 2) {
+      console.log('sobra MAIOR - scrollX antigo: ', scrollX)
+      let calcMarginRight = scrollX - (window.innerWidth / 2)
+      console.log('sobra MAIOR - scrollX novo: ', calcMarginRight)
+      setX(calcMarginRight)
+    } 
+    if(componentOffsetWidth - scrollX < window.innerWidth / 2 && componentOffsetWidth - scrollX > 0) {
+      let calcMarginRight = componentOffsetWidth - scrollX
+      setX(calcMarginRight)
+
+    }
     // if(componentWidth > window.innerWidth && componentMarginRight > 0) {
     //     let calcMarginRight = scrollX - (window.innerWidth / 2)
     //   setX(calcMarginRight)

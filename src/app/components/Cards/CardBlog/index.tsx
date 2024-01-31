@@ -27,7 +27,7 @@ interface CardBlogProps {
 }
 
 
-const CardBlogBox = styled.li`
+const CardBlogBox = styled.div`
     cursor: pointer;
     position: relative;
     min-width: 310px;
