@@ -45,7 +45,10 @@ export function ScrollRows({componentRef, scrollX, setX} : ScrollRowsProps){
   console.log('componentScrollWidth: ', componentScrollWidth)
   console.log('componentOffsetWidth: ', componentOffsetWidth)
 
+  console.log('scrollX: ', scrollX)
 
+  let scrollLess = scrollX < 0 ? Math.abs(scrollX) : scrollX
+  console.log('dif: ', componentOffsetWidth - scrollLess)
   // console.log('componentWidth: ', componentWidth)
   // console.log('componentRight: ', componentRef?.current?.)
 
@@ -63,7 +66,7 @@ export function ScrollRows({componentRef, scrollX, setX} : ScrollRowsProps){
     console.log('listComponent scrollWidth: ', componentScrollWidth)
     console.log('listComponent offsetWidth: ', componentOffsetWidth)
 
-    console.log('calc: ', componentOffsetWidth + scrollX)
+    console.log('calc: ', componentOffsetWidth - Math.abs(scrollX))
     // console.log('componentWidth: ', componentWidth)
     // let calcToRight = componentOffsetWidth - scrollX
     //se o tamanho do scroll menos o tamanho da área vista for maior que a metade da janela, 

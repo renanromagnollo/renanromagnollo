@@ -28,6 +28,8 @@ interface CardBlogProps {
 
 
 const CardBlogBox = styled.div`
+    user-select: none;
+
     cursor: pointer;
     position: relative;
     min-width: 310px;
