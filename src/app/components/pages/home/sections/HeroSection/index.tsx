@@ -12,7 +12,7 @@ const freehand = Freehand({
     subsets: ['latin'],
     display: 'swap',
 })
-const nothingYouCouldDo = Freehand({
+const nothingYouCouldDo = Nothing_You_Could_Do({
     weight: '400',
     subsets: ['latin'],
     display: 'swap',
@@ -88,7 +88,7 @@ export function HeroSection({ title, subtitle, text }: HeroSectionProps) {
             <div className="container">
                 <div>
                     {/* <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{fontSize: '4rem'}}>Renan Romagnollo</span></h5> */}
-                    {title || <h5>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{ fontSize: '4rem' }}>Renan Romagnollo</span></h5>}
+                    {title || <h4>Olá! Meu nome é <span className={nothingYouCouldDo.className} style={{ fontSize: '3.5rem', marginLeft: '5px' }}>Renan Romagnollo</span></h4>}
                     <h4>I'm a <span>Front-End Developer</span></h4>
                     <p style={{ width: '40vw' }}>{text}</p>
                     <div>

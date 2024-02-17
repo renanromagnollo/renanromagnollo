@@ -22,12 +22,14 @@ import { RichText } from "../../RichText"
 //     // children: ReactNode
 // }
 
-// interface CardBlogProps {
-//     post: BlogProps
-// }
+interface CardBlogProps {
+    post: BlogProps
+}
 
 
 const CardBlogBox = styled.div`
+    user-select: none;
+
     cursor: pointer;
     position: relative;
     min-width: 310px;
@@ -98,6 +100,7 @@ const ContentCard = styled.div`
         > span {
             height: 100%;
             padding: 10px;
+            /* line-height: 5px; */
         }
     }
     
@@ -108,10 +111,11 @@ const ContentCard = styled.div`
         /* padding: 10px; */
         text-align: end;
         transition: all .3s;
+        /* line-height: 5px; */
     }
     `
 
-export function CardBlog({ post }: { post: CardBlogProps }) {
+export function CardBlog({ post }: CardBlogProps) {
 
     console.log('CardBlog props: ', post)
     // let tit = !title ? 'Lorem ipsum dolor sit amet.' : title

@@ -1,9 +1,9 @@
 import { RichTextContent } from '@graphcms/rich-text-react-renderer';
 
 export interface BlogProps {
-    params: {
-        slug: string
-    }
+    // params: {
+    //     slug: string
+    // }
     slug: string
     title: string
     subtitle: {
@@ -12,7 +12,9 @@ export interface BlogProps {
     text: {
         raw: RichTextContent
     }
-    image?: string
+    image?: {
+        url: string
+    }
 }
 
 export interface CardBlogProps {
