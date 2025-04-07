@@ -7,11 +7,15 @@ Atualmente estou em busca da minha primeira oportunidade profissional na área d
 
 ## 🚀 Skills
 
+- 🧠 Lógica de Programação
+- 🔤 HTML5
+- 🎨 CSS3
+- 📜 JavaScript (ES6+)
 - ⚛️ ReactJS
 - 🧩 Next.js
 - 💨 Tailwind CSS
 - 🎨 Styled-components
-- 🧠 React Hook Form
+- 📦 React Hook Form
 - 🔄 React Query / TanStack Query
 - ⚡ Vite
 - 🧪 Testes (estudando)
