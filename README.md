@@ -33,6 +33,7 @@ Desenvolvida com foco em experiência do usuário, performance e design.
 
 ## 📱 Como me encontrar
 
+- 💼 LinkedIn: [linkedin.com/in/renanromagnollo](https://www.linkedin.com/in/renanromagnollo)
 - 📞 WhatsApp: [Clique para conversar](https://wa.me/5531982156685)
 - 📸 Instagram: [@renanromagnollo](https://instagram.com/renanromagnollo)
 
