@@ -8,10 +8,12 @@ Atualmente estou em busca da minha primeira oportunidade profissional na área d
 ## 🚀 Skills
 
 - ⚛️ ReactJS
+- 🧩 Next.js
+- 💨 Tailwind CSS
 - 🎨 Styled-components
 - 🧠 React Hook Form
 - 🔄 React Query / TanStack Query
-- ⚡ Vite / Next.js
+- ⚡ Vite
 - 🧪 Testes (estudando)
 - 🌍 Internacionalização (i18n)
 - 🔐 Autenticação com login (em aprendizado)
@@ -22,9 +24,9 @@ Atualmente estou em busca da minha primeira oportunidade profissional na área d
 
 ## 🌟 Projeto em Destaque
 
-### [Estúdio de Beleza Sabrina Xavier](https://sabrinaxavier.com.br)
+### [Studio de Beleza Sabrina Xavier](https://sabrinaxavier.com.br)
 
-> Plataforma completa para agendamentos, galeria de fotos e pagamentos.  
+> Plataforma com galeria de fotos, dicas e informações. Além de novas ideias a serem inseridas como: Dashboard, API de Instagram, entre outros.
 Desenvolvida com foco em experiência do usuário, performance e design.
 
 ---
