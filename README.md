@@ -24,7 +24,7 @@ Atualmente estou em busca da minha primeira oportunidade profissional na área d
 
 ## 🌟 Projeto em Destaque
 
-### [Studio de Beleza Sabrina Xavier](https://sabrinaxavier.com.br)
+### [Studio Sabrina Xavier](https://sabrinaxavier.com.br)
 
 > Plataforma com galeria de fotos, dicas e informações. Além de novas ideias a serem inseridas como: Dashboard, API de Instagram, entre outros.
 Desenvolvida com foco em experiência do usuário, performance e design.
