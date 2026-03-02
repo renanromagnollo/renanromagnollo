@@ -1,4 +1,4 @@
-# 👋 Olá! Eu sou o Renan Romagnollo
+# Olá! Eu sou o Renan Romagnollo
 
 Sou desenvolvedor Frontend em formação com foco em **ReactJS**.  
 Atualmente estou em busca da minha primeira oportunidade profissional na área de programação.
